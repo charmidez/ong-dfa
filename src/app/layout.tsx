@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 //import "../styles/menu.css";
-import Menu from "@/components/Menu"
+import Menu from "@/components/Menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Menu />
+        <div className="flex flex-col justify-center ">
+          <Menu />
+        </div>
+
         {children}
       </body>
     </html>

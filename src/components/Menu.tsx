@@ -16,39 +16,95 @@ const menuLink = [
 export default function Menu() {
   const container = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const tl = useRef<gsap.core.Timeline | null>(null);
 
-  const toggleMenu = () => setIsMenuOpen((v) => !v);
+  //const toggleMenu = () => setIsMenuOpen((v) => !v);
 
-  useGSAP(() => {
-    // Initial position links (off screen)
-    gsap.set(".menu-link-item-holder", { y: 75, opacity: 0 });
+  const openMenu = () => {
+    if (!tl.current) return;
+    setIsAnimating(true);
+    tl.current.play();
+  };
 
-    tl.current = gsap
-      .timeline({ paused: true })
-      .fromTo(
-        ".menu-overlay",
-        { y: "-100%" },
-        {
-          y: "0%",
-          duration: 0.8,
-          ease: "power4.inOut",
-          display: "flex",
-        }
-      )
-      .to(
-        ".menu-link-item-holder",
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.6,
-          stagger: 0.15,
-          ease: "power4.out",
-        },
-        "-=0.4"
-      )
-      .pause();
-  }, { scope: container });
+  const closeMenu = () => {
+    if (!tl.current) return;
+    setIsAnimating(true);
+    tl.current.reverse();
+  };
+
+  /*
+  useGSAP(
+    () => {
+      // Initial position links (off screen)
+      gsap.set(".menu-link-item-holder", { y: 75, opacity: 0 });
+
+      tl.current = gsap
+        .timeline({ paused: true })
+        .fromTo(
+          ".menu-overlay",
+          { y: "-100%" },
+          {
+            y: "0%",
+            duration: 0.8,
+            ease: "power4.inOut",
+            display: "flex",
+          }
+        )
+        .to(
+          ".menu-link-item-holder",
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.15,
+            ease: "power4.out",
+          },
+          "-=0.4"
+        )
+        .pause();
+    },
+    { scope: container }
+  );
+  */
+
+  useGSAP(
+    () => {
+      gsap.set(".menu-link-item-holder", { y: 75, opacity: 0 });
+      tl.current = gsap
+        .timeline({ paused: true })
+        .fromTo(
+          ".menu-overlay",
+          { y: "-100%" },
+          {
+            y: "0%",
+            duration: 0.8,
+            ease: "power4.inOut",
+            display: "flex",
+          }
+        )
+        .to(
+          ".menu-link-item-holder",
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.15,
+            ease: "power4.out",
+          },
+          "-=0.4"
+        )
+        .eventCallback("onComplete", () => {
+          setIsMenuOpen(true);
+          setIsAnimating(false);
+        })
+        .eventCallback("onReverseComplete", () => {
+          setIsMenuOpen(false);
+          setIsAnimating(false);
+        });
+    },
+    { scope: container }
+  );
 
   useEffect(() => {
     if (!tl.current) return;
@@ -62,28 +118,42 @@ export default function Menu() {
   return (
     <div ref={container}>
       {/* Menu Bar */}
-      <div className="fixed top-0 left-0 w-screen flex justify-between items-center p-4 z-30 bg-transparent">
-        <div className="menu-logo">
-          <Link href="/">
-            <Image src="/logo-no-bg.png" alt="Logo" width={100} height={100} />
-          </Link>
+      <div className="flex flex-row justify-center items-center">
+        <div className="fixed w-full top-0 flex justify-center z-50 px-8 py-4">
+          <div className="w-full rounded-2xl">
+            <div className="flex justify-between items-center gap-2 text-white">
+              <div className="menu-logo">
+                <Link href="/">
+                  <Image
+                    src="/logo-no-bg.png"
+                    alt="Logo"
+                    width={100}
+                    height={100}
+                  />
+                </Link>
+              </div>
+
+              <button
+                aria-label="Toggle menu"
+                className="menu-toggle cursor-pointer flex flex-col items-center justify-center space-y-1"
+                onClick={isMenuOpen ? closeMenu : openMenu}
+                disabled={isAnimating}
+                type="button"
+              >
+                <span
+                  className={`text-3xl select-none transition-opacity duration-300 ${
+                    isMenuOpen
+                      ? "text-black opacity-100"
+                      : "text-white opacity-100"
+                  }`}
+                >
+                  {isMenuOpen ? "Fermer" : "Menu"}
+                </span>
+              </button>
+
+            </div>
+          </div>
         </div>
-        <button
-          aria-label="Toggle menu"
-          className="menu-toggle cursor-pointer flex flex-col items-center justify-center space-y-1"
-          onClick={toggleMenu}
-          type="button"
-        >
-          {isMenuOpen ? (
-            <span className="text-white text-3xl select-none">✕</span>
-          ) : (
-            <>
-              <span className="block w-6 h-0.5 bg-white"></span>
-              <span className="block w-6 h-0.5 bg-white"></span>
-              <span className="block w-6 h-0.5 bg-white"></span>
-            </>
-          )}
-        </button>
       </div>
 
       {/* Overlay menu */}
@@ -98,7 +168,7 @@ export default function Menu() {
                 <Link
                   href={link.path}
                   className="text-4xl font-extrabold text-black hover:underline"
-                  onClick={toggleMenu}
+                  onClick={isMenuOpen ? closeMenu : openMenu}
                 >
                   {link.label}
                 </Link>
