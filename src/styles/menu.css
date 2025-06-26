@@ -1,0 +1,63 @@
+
+.menu-bar, .menu-overlay {
+    position : fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 2em;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.menu-bar a, .menu-open p {
+    color : #fff;
+    cursor: pointer;
+}
+
+.menu-close p {
+    color : #000;
+    cursor: pointer;
+}
+
+.menu-overlay {
+    position : fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 2em;
+    z-index: 1;
+    background: #ff2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+.menu-close-icon {
+    flex : 2;
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.menu-copy {
+    flex : 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2em;
+}
+
+.menu-preview {
+    flex : 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}   
