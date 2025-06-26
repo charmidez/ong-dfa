@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 //import "../styles/menu.css";
 import Menu from "@/components/Menu";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+import { Quicksand, Roboto } from 'next/font/google';
+
+const quicksand = Quicksand({
+  subsets: ['latin'],            // Sous-ensembles requis
+  variable: '--font-quicksand',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const roboto = Roboto({
+  subsets: ['latin'], 
+  variable: '--font-roboto',
 });
 
 export const metadata: Metadata = {
@@ -25,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr" className={`${quicksand.variable} ${roboto.variable} antialiased`}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased font-sans"
       >
         <div className="flex flex-col justify-center ">
           <Menu />

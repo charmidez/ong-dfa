@@ -7,10 +7,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const menuLink = [
-  { path: "/", label: "Accueil" },
-  { path: "/apropos", label: "À propos" },
-  { path: "/projets", label: "Projets" },
-  { path: "/contact", label: "Contact" },
+  { path: "/", label: "BIENVENUE" },
+  { path: "/apropos", label: "À PROPOS" },
+  { path: "/projets", label: "PROJETS" },
+  { path: "/contact", label: "CONTACT" },
 ];
 
 export default function Menu() {
@@ -119,17 +119,24 @@ export default function Menu() {
     <div ref={container}>
       {/* Menu Bar */}
       <div className="flex flex-row justify-center items-center">
-        <div className="fixed w-full top-0 flex justify-center z-50 px-8 py-4">
+        <div className="fixed w-full top-0 flex justify-center px-8 py-4 z-30">
           <div className="w-full rounded-2xl">
             <div className="flex justify-between items-center gap-2 text-white">
               <div className="menu-logo">
-                <Link href="/">
+                <Link
+                  href="/"
+                  className="flex flex-row items-center gap-2 lg:gap-4 "
+                >
                   <Image
-                    src="/logo-no-bg.png"
+                    src="/logos/ico-no-bg.png"
                     alt="Logo"
-                    width={100}
-                    height={100}
+                    width={128}
+                    height={128}
+                    className="w-16 h-16 object-contain lg:w-20 lg:h-20"
                   />
+                  <p className="font-bold text-white lg:text-4xl text-2xl">
+                    DFA <span className="text-rouge">ONG</span>
+                  </p>
                 </Link>
               </div>
 
@@ -141,16 +148,15 @@ export default function Menu() {
                 type="button"
               >
                 <span
-                  className={`text-3xl select-none transition-opacity duration-300 ${
+                  className={`lg:text-4xl text-2xl font-light select-none transition-all duration-300 ${
                     isMenuOpen
-                      ? "text-black opacity-100"
+                      ? "text-white opacity-100"
                       : "text-white opacity-100"
                   }`}
                 >
                   {isMenuOpen ? "Fermer" : "Menu"}
                 </span>
               </button>
-
             </div>
           </div>
         </div>
@@ -158,24 +164,53 @@ export default function Menu() {
 
       {/* Overlay menu */}
       <nav
-        className="menu-overlay fixed top-0 left-0 w-screen h-screen flex flex-col justify-center items-center bg-[#ff2] z-20 hidden"
+        className="menu-overlay fixed top-0 left-0 w-screen h-screen flex flex-col justify-around z-20 bg-green-dark-transparent  hidden lg:py-16"
         aria-hidden={!isMenuOpen}
       >
-        <ul className="menu-links flex flex-col space-y-8 text-center">
-          {menuLink.map((link, idx) => (
-            <li key={idx} className="menu-link-item">
-              <div className="menu-link-item-holder">
-                <Link
-                  href={link.path}
-                  className="text-4xl font-extrabold text-black hover:underline"
-                  onClick={isMenuOpen ? closeMenu : openMenu}
-                >
-                  {link.label}
-                </Link>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div className="flex flex-row justify-around w-full lg:pt-0 pt-24">
+          <ul className="menu-links flex flex-col space-y-8 text-start">
+            {menuLink.map((link, idx) => (
+              <li key={idx} className="menu-link-item">
+                <div className="menu-link-item-holder">
+                  <Link
+                    href={link.path}
+                    className="text-4xl  text-white hover:underline font-extralight"
+                    onClick={isMenuOpen ? closeMenu : openMenu}
+                  >
+                    {link.label}
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <h1 className="text-3xl font-extrabold"></h1>
+        </div>
+
+        <div className="flex lg:flex-row flex-col justify-around  w-full lg:items-end items-start px-8 gap-4 lg:gap-0">
+          <div className="flex lg:flex-row flex-col justify-center lg:items-end items-start lg:gap-24 gap-4 menu-link-item">
+            <div className="flex flex-col menu-link-item-holder">
+              <a href="">X</a>
+              <a href="">Facebook</a>
+              <a href="">Instagram</a>
+              <a href="">TikTok</a>
+              <a href="">TikTok</a>
+            </div>
+
+            <div className="flex flex-col menu-link-item-holder">
+              <a href="">contact@ong-dfa.com</a>
+              <a href="">ongdfa7@gmail.com</a>
+            </div>
+
+            <div className="flex flex-col menu-link-item-holder">
+              <a href="">contact@ong-dfa.com</a>
+              <a href="">ongdfa7@gmail.com</a>
+              <a href="">+ 288 76 99 09 09</a>
+            </div>
+          </div>
+
+          <div className="menu-link-item-holder">Tous droits réservés - ONG DFA</div>
+        </div>
       </nav>
     </div>
   );
