@@ -187,7 +187,7 @@ export default function Menu() {
           <h1 className="text-3xl font-extrabold"></h1>
         </div>
 
-        <div className="flex lg:flex-row flex-col justify-around  w-full lg:items-end items-start px-8 gap-4 lg:gap-0">
+        <div className="flex lg:flex-row flex-col justify-around text-white w-full lg:items-end items-start px-8 gap-4 lg:gap-0">
           <div className="flex lg:flex-row flex-col justify-center lg:items-end items-start lg:gap-24 gap-4 menu-link-item">
             <div className="flex flex-col menu-link-item-holder">
               <a href="">X</a>
