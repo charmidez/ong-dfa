@@ -119,7 +119,7 @@ export default function Menu() {
     <div ref={container}>
       {/* Menu Bar */}
       <div className="flex flex-row justify-center items-center">
-        <div className="fixed w-full top-0 flex justify-center px-8 py-4 z-30">
+        <div className="fixed w-full top-0 flex justify-center lg:px-8 px-4 py-4 z-30 ">
           <div className="w-full rounded-2xl">
             <div className="flex justify-between items-center gap-2 text-white">
               <div className="menu-logo">
@@ -164,7 +164,7 @@ export default function Menu() {
 
       {/* Overlay menu */}
       <nav
-        className="menu-overlay fixed top-0 left-0 w-screen h-screen flex flex-col justify-around z-20 bg-green-dark-transparent  hidden lg:py-16"
+        className="menu-overlay fixed top-0 left-0 w-screen h-screen flex-col justify-around z-20 bg-green-dark-transparent   lg:py-16"
         aria-hidden={!isMenuOpen}
       >
         <div className="flex flex-row justify-around w-full lg:pt-0 pt-24">

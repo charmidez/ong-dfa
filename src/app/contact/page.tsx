@@ -1,11 +1,15 @@
+import TitrePage from "@/components/TitrePage";
 
 // CONTACT 
 const Page = () => {
   {
     return (
       <main>
-        <h1>Contact</h1>
-        <p>Voici comment nous contacter.</p>
+      <TitrePage
+        titre="CONTACT"
+        description=""
+        className="bg-[url('/images/titre-a-contact.jpg')] bg-cover bg-center"
+      />
       </main>
     );
   }

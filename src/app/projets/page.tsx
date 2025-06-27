@@ -1,11 +1,15 @@
+import TitrePage from "@/components/TitrePage";
 
 // PROJECT 
 const Page = () => {
   {
     return (
       <main>
-        <h1>Projets</h1>
-        <p>Voici quelques projets sur lesquels nous avons travaillé.</p>
+      <TitrePage
+        titre="NOS PROJETS"
+        description="DFA intervient dans cinq domaines clés pour améliorer les conditions de vie des populations vulnérables."
+        className="bg-[url('/images/titre-a-projet.jpg')] bg-cover bg-center"
+      />
       </main>
     );
   }
