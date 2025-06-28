@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import Menu from "@/components/Menu";
 
 import { Quicksand, Roboto } from 'next/font/google';
+import Footer from "@/components/FooterMine";
 
 const quicksand = Quicksand({
   subsets: ['latin'],            // Sous-ensembles requis
@@ -33,8 +34,10 @@ export default function RootLayout({
         <div className="flex flex-col justify-center ">
           <Menu />
         </div>
-
         {children}
+        <div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
