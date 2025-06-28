@@ -169,14 +169,18 @@ export default function Menu() {
       >
         <div className="flex flex-row justify-around w-full lg:pt-0 pt-24">
           <ul className="menu-links flex flex-col space-y-8 text-start">
+            <li><Link className="text-black text-2xl border-2 border-white p-2 rounded-lg bg-white" href="/actualite">Actualité</Link></li>
             {menuLink.map((link, idx) => (
               <li key={idx} className="menu-link-item">
+                
                 <div className="menu-link-item-holder">
+                  
                   <Link
                     href={link.path}
                     className="text-4xl  text-white hover:underline font-extralight"
                     onClick={isMenuOpen ? closeMenu : openMenu}
                   >
+                    
                     {link.label}
                   </Link>
                 </div>
@@ -187,7 +191,7 @@ export default function Menu() {
           <h1 className="text-3xl font-extrabold"></h1>
         </div>
 
-        <div className="flex lg:flex-row flex-col justify-around  w-full lg:items-end items-start px-8 gap-4 lg:gap-0">
+        <div className="flex lg:flex-row flex-col justify-around text-white w-full lg:items-end items-start px-8 gap-4 lg:gap-0">
           <div className="flex lg:flex-row flex-col justify-center lg:items-end items-start lg:gap-24 gap-4 menu-link-item">
             <div className="flex flex-col menu-link-item-holder">
               <a href="">X</a>
