@@ -1,4 +1,5 @@
-import TitrePage from "@/components/TitrePage";
+import Breadcrumb from "@/components/Breadcumbs";
+import {TitrePage} from "@/components/Titre";
 
 // PROJECT 
 const Page = () => {
@@ -8,8 +9,11 @@ const Page = () => {
       <TitrePage
         titre="NOS PROJETS"
         description="DFA intervient dans cinq domaines clés pour améliorer les conditions de vie des populations vulnérables."
-        className="bg-[url('/images/titre-a-projet.jpg')] bg-cover bg-center"
+        className="bg-[url('/images/titre-a-projet.webp')] bg-cover bg-center"
       />
+      <div className="px-8 py-4">
+        <Breadcrumb />
+      </div>
       </main>
     );
   }

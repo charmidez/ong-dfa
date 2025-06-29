@@ -168,19 +168,23 @@ export default function Menu() {
         aria-hidden={!isMenuOpen}
       >
         <div className="flex flex-row justify-around w-full lg:pt-0 pt-24">
-          <ul className="menu-links flex flex-col space-y-8 text-start">
-            <li><Link className="text-black text-2xl border-2 border-white p-2 rounded-lg bg-white" href="/actualite">Actualité</Link></li>
+          <ul className="menu-links flex flex-col lg:space-y-8 space-y-2 text-start">
+            <li className="mb-2 lg:mb-8">
+              <Link
+                className="text-black lg:text-2xl text-xl border-2 border-white lg:p-2 p-1 rounded-lg bg-white"
+                href="/actualite"
+              >
+                Actualité
+              </Link>
+            </li>
             {menuLink.map((link, idx) => (
               <li key={idx} className="menu-link-item">
-                
                 <div className="menu-link-item-holder">
-                  
                   <Link
                     href={link.path}
-                    className="text-4xl  text-white hover:underline font-extralight"
+                    className="lg:text-4xl text-2xl text-white hover:underline font-extralight"
                     onClick={isMenuOpen ? closeMenu : openMenu}
                   >
-                    
                     {link.label}
                   </Link>
                 </div>
@@ -213,7 +217,9 @@ export default function Menu() {
             </div>
           </div>
 
-          <div className="menu-link-item-holder">Tous droits réservés - ONG DFA</div>
+          <div className="menu-link-item-holder">
+            Tous droits réservés - ONG DFA
+          </div>
         </div>
       </nav>
     </div>

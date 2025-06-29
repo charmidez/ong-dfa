@@ -1,16 +1,16 @@
-import Image from 'next/image';
+import { Actualites, Slider } from "@/sections/acceuil";
 // HOME
 const Page = () => {
   {
     return (
       <main>
-        <Image
-          src="/images/poignee-de-main-interculturelle-en-plein-air.jpg"
-          alt="Home Image"
-          width={1920}
-          height={1080}
-          className="w-full"
-        />
+        <div>
+          <Slider />
+        </div>
+
+        <div>
+          <Actualites />
+        </div>
       </main>
     );
   }

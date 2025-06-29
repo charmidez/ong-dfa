@@ -3,12 +3,18 @@ import "../styles/globals.css";
 //import "../styles/menu.css";
 import Menu from "@/components/Menu";
 
-import { Quicksand, Roboto } from 'next/font/google';
+import { Poppins, Quicksand, Roboto } from 'next/font/google';
 import Footer from "@/components/FooterMine";
 
 const quicksand = Quicksand({
   subsets: ['latin'],            // Sous-ensembles requis
   variable: '--font-quicksand',
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],            // Sous-ensembles requis
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], // Poids de police requis
 });
 
 const roboto = Roboto({
@@ -27,11 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${quicksand.variable} ${roboto.variable} antialiased`}>
+    <html lang="fr" className={`${poppins.variable} ${quicksand.variable} ${roboto.variable} antialiased`}>
       <body
         className="antialiased font-sans"
       >
-        <div className="flex flex-col justify-center ">
+        <div className="flex flex-col justify-center">
           <Menu />
         </div>
         {children}

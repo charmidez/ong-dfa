@@ -39,7 +39,7 @@ interface MenuItemProps {
 
 export function MenuItem({ texte, href, src }: ButtonLinkProps) {
   return (
-    <li>
+
       <Link
         href={href}
         className="inline-flex items-center gap-2 font-bold text-black hover:underline underline-offset-4 transition-all"
@@ -55,6 +55,6 @@ export function MenuItem({ texte, href, src }: ButtonLinkProps) {
           />
         )}
       </Link>
-    </li>
+
   );
 }

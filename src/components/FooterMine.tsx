@@ -1,7 +1,6 @@
 //import Link from "next/link";
 import Image from "next/image";
 import {ButtonLink, MenuItem} from "./Buttons";
-import Menu from "./Menu";
 
 const Footer = () => {
   return (
