@@ -1,4 +1,4 @@
-import { Actualites, Slider } from "@/sections/acceuil";
+import { Actualites, DomainesIntervention, MotDuPresident, Slider } from "@/app/acceuilSections";
 // HOME
 const Page = () => {
   {
@@ -7,9 +7,14 @@ const Page = () => {
         <div>
           <Slider />
         </div>
-
         <div>
           <Actualites />
+        </div>
+        <div>
+          <MotDuPresident />
+        </div>
+        <div>
+          <DomainesIntervention />
         </div>
       </main>
     );

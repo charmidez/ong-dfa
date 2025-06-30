@@ -21,6 +21,8 @@ export default function Menu() {
 
   //const toggleMenu = () => setIsMenuOpen((v) => !v);
 
+  const [hasScrolled, setHasScrolled] = useState(false);
+
   const openMenu = () => {
     if (!tl.current) return;
     setIsAnimating(true);
@@ -33,40 +35,16 @@ export default function Menu() {
     tl.current.reverse();
   };
 
-  /*
-  useGSAP(
-    () => {
-      // Initial position links (off screen)
-      gsap.set(".menu-link-item-holder", { y: 75, opacity: 0 });
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 10);
+    };
 
-      tl.current = gsap
-        .timeline({ paused: true })
-        .fromTo(
-          ".menu-overlay",
-          { y: "-100%" },
-          {
-            y: "0%",
-            duration: 0.8,
-            ease: "power4.inOut",
-            display: "flex",
-          }
-        )
-        .to(
-          ".menu-link-item-holder",
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: "power4.out",
-          },
-          "-=0.4"
-        )
-        .pause();
-    },
-    { scope: container }
-  );
-  */
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useGSAP(
     () => {
@@ -116,11 +94,16 @@ export default function Menu() {
   }, [isMenuOpen]);
 
   return (
-    <div ref={container}>
+    <header
+      ref={container}
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
+        hasScrolled ? "bg-white shadow-md" : "bg-transparent"
+      }`}
+    >
       {/* Menu Bar */}
-      <div className="flex flex-row justify-center items-center">
-        <div className="fixed w-full top-0 flex justify-center lg:px-8 px-4 py-4 z-30 ">
-          <div className="w-full rounded-2xl">
+      <div className="flex top-0 flex-row justify-center items-center">
+        <div className="w-full top-0 flex justify-center lg:px-8 px-4 py-4 z-30 ">
+          <div className="w-full">
             <div className="flex justify-between items-center gap-2 text-white">
               <div className="menu-logo">
                 <Link
@@ -134,7 +117,15 @@ export default function Menu() {
                     height={128}
                     className="w-16 h-16 object-contain lg:w-20 lg:h-20"
                   />
-                  <p className="font-bold text-white lg:text-4xl text-2xl">
+                  <p
+                    className={` font-bold lg:text-4xl text-2xl ${
+                      isMenuOpen
+                        ? "text-white"
+                        : hasScrolled
+                        ? "text-black"
+                        : "text-white"
+                    } `}
+                  >
                     DFA <span className="text-rouge">ONG</span>
                   </p>
                 </Link>
@@ -142,20 +133,37 @@ export default function Menu() {
 
               <button
                 aria-label="Toggle menu"
-                className="menu-toggle cursor-pointer flex flex-col items-center justify-center space-y-1"
+                className="menu-toggle cursor-pointer flex flex-row items-center justify-center lg:gap-4 gap-2"
                 onClick={isMenuOpen ? closeMenu : openMenu}
                 disabled={isAnimating}
                 type="button"
               >
                 <span
-                  className={`lg:text-4xl text-2xl font-light select-none transition-all duration-300 ${
+                  className={`lg:text-4xl text-2xl font-light select-none transition-all duration-300 
+                  ${
                     isMenuOpen
-                      ? "text-white opacity-100"
-                      : "text-white opacity-100"
-                  }`}
+                      ? "text-white"
+                      : hasScrolled
+                        ? "text-black"
+                        : "text-white"
+                  }
+                    `}
                 >
-                  {isMenuOpen ? "Fermer" : "Menu"}
+                  {isMenuOpen ? "FERMER" : "MENU"}
                 </span>
+                <Image
+                  src={
+                    isMenuOpen
+                      ? "/icons/close-svgrepo-com.svg"
+                      : hasScrolled
+                        ? "/icons/menu-svgrepo-com.svg"
+                        : "/icons/menu-svgrepo-com-white.svg"
+                  }
+                  alt="Logo"
+                  width={46}
+                  height={46}
+                  className="w-10 h-10 object-contain lg:w-12 lg:h-12"
+                />
               </button>
             </div>
           </div>
@@ -222,6 +230,6 @@ export default function Menu() {
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 }

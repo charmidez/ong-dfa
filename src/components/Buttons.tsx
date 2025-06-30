@@ -7,13 +7,14 @@ interface ButtonLinkProps {
   texte: string;
   href: string;
   src?: string;
+  className?: string;
 }
 
-export function ButtonLink({ texte, href, src }: ButtonLinkProps) {
+export function ButtonLink({ texte, href, src, className }: ButtonLinkProps) {
   return (
     <Link
       href={href}
-      className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-green-600 text-white font-medium hover:bg-green-700 w-full transition"
+      className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-vert-clair text-white font-medium hover:bg-vert-fonce w-full transition ${className}`}
     >
       {src && (
         <Image

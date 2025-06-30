@@ -30,15 +30,16 @@ export function TitrePage({
 
 
 
-type TitresectionProps = {
+type TitreSectionProps = {
   titre: string;
   className? : string
 };
 
-export const Titresection = ({ titre, className }: TitresectionProps) => {
+export const TitreSection = ({ titre, className }: TitreSectionProps) => {
   return (
     <h2 className={`text-mine-bordeau lg:text-3xl md:text-2xl text-xl font-semibold uppercase lg:pb-4 pb-2 ${className} `}>
       {titre}
+      <div className="h-1 w-24 bg-gradient-to-r from-vert-fonce via-vert-clair to-white rounded-full animate-pulse" />
     </h2>
   );
 };
