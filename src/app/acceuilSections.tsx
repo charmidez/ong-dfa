@@ -1,7 +1,7 @@
 import { ButtonLink } from "@/components/Buttons";
 import { CardDomaine, Cardinfo } from "@/components/Card";
 import { TitreSection } from "@/components/Titre";
-import { actualitesData, domaines } from "@/data/actualiteData";
+import { actualitesData, domaines } from "@/data/acceuilData";
 import Image from "next/image";
 
 export function Slider() {
@@ -59,7 +59,7 @@ export function MotDuPresident() {
     <section className="bg-vert-clair py-16 px-4 lg:px-8">
       <TitreSection titre="Mot du Dirigeant" className="text-white" />
 
-      <div className="bg-green-50 rounded-lg p-6 lg:p-10 flex flex-col lg:flex-row gap-6 lg:gap-12 items-start">
+      <div className=" rounded-lg p-6 lg:p-10 flex flex-col lg:flex-row gap-6 lg:gap-12 items-start">
         <div className="flex-shrink-0">
           <Image
             src="/images/dirigents.webp"
@@ -94,6 +94,9 @@ export function MotDuPresident() {
 }
 
 export function DomainesIntervention(){
+  {
+    /* Domaines d'intervention */
+  }
   return(
     <section className="py-16 px-4 lg:px-8">
       <TitreSection titre="Nos Domaines d'intervention" />

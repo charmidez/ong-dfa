@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/Breadcumbs";
-import {TitrePage} from "@/components/Titre";
+import { TitrePage } from "@/components/Titre";
+import { CarouselAuto, MissionVisionValeurs, Partenanriat, PresentationGenerale } from "./aproposSections";
 
 // A PROPOS
 const Page = () => {
@@ -12,6 +13,18 @@ const Page = () => {
       />
       <div className="px-8 py-4">
         <Breadcrumb />
+      </div>
+      <div>
+        <PresentationGenerale />
+      </div>
+      <div>
+        <CarouselAuto />
+      </div>
+      <div>
+        <MissionVisionValeurs />
+      </div>
+      <div>
+        <Partenanriat />
       </div>
     </main>
   );

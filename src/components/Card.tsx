@@ -40,7 +40,6 @@ export const Cardinfo = ({
   );
 };
 
-
 type CardDomaineProps = {
   titre: string;
   bgColor: string;
@@ -53,10 +52,47 @@ export const CardDomaine = ({ titre, bgColor, icon }: CardDomaineProps) => {
       className={`flex flex-col items-center justify-center p-6 rounded-lg text-white ${bgColor} min-h-[180px]`}
     >
       <div className="bg-black/30 rounded-full p-4 mb-4">
-        <Image src={icon} alt={titre} className="w-10 h-10" width={100} height={100} />
+        <Image
+          src={icon}
+          alt={titre}
+          className="w-10 h-10"
+          width={100}
+          height={100}
+        />
       </div>
       <p className="text-center font-semibold">{titre}</p>
     </div>
   );
 };
 
+type CardMissionVisionValeurProps = {
+  titre: string;
+  bgColor: string;
+  icon: string;
+  desc: string;
+};
+
+export const CardMissionVisionValeur = ({
+  titre,
+  bgColor,
+  icon,
+  desc,
+}: CardMissionVisionValeurProps) => {
+  return (
+    <div
+      className={`flex flex-col items-center justify-start p-6 rounded-lg text-white ${bgColor} min-h-[180px]`}
+    >
+      <div className="bg-black/30 rounded-full p-4 mb-4">
+        <Image
+          src={icon}
+          alt={titre}
+          className="w-16 h-16"
+          width={100}
+          height={100}
+        />
+      </div>
+      <p className="text-center font-semibold text-xl">{titre}</p>
+      <p className="text-center text-lg">{desc}</p>
+    </div>
+  );
+};
