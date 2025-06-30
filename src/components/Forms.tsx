@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, FormEvent, use } from "react";
+import { useState, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 
 interface FormData {
