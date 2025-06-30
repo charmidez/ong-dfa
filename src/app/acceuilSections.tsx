@@ -1,7 +1,7 @@
 import { ButtonLink } from "@/components/Buttons";
 import { CardDomaine, Cardinfo } from "@/components/Card";
 import { TitreSection } from "@/components/Titre";
-import { actualitesData, domaines } from "@/data/acceuilData";
+import { actualitesData, domaines, motDeBienvenue, sliderData } from "@/data/acceuilData";
 import Image from "next/image";
 
 export function Slider() {
@@ -13,11 +13,10 @@ export function Slider() {
       <div className="flex flex-col items-start justify-center lg:pb-90 pb-44 pt-10">
         <div className="text-white lg:w-96">
           <h1 className="text-2xl lg:text-4xl font-bold text-start">
-            Ensemble, construisons un avenir meilleur
+            {sliderData.titre}
           </h1>
           <p className="text-lg font-light text-start mt-2">
-            Notre ONG s'engage à améliorer les conditions de vie des populations
-            vulnérables à travers des projets concrets et durables.
+            {sliderData.description}
           </p>
           <div className="w-fit mt-4">
             <ButtonLink texte="En savoir plus" href="/apropos" />
@@ -57,12 +56,12 @@ export function MotDuPresident() {
   }
   return (
     <section className="bg-vert-clair py-16 px-4 lg:px-8">
-      <TitreSection titre="Mot du Dirigeant" className="text-white" />
+      <TitreSection titre={motDeBienvenue.titre} className="text-white" />
 
-      <div className=" rounded-lg p-6 lg:p-10 flex flex-col lg:flex-row gap-6 lg:gap-12 items-start">
+      <div className=" rounded-lg p-6 lg:p-10 flex flex-col lg:flex-row gap-6 lg:gap-12 items-start bg-white">
         <div className="flex-shrink-0">
           <Image
-            src="/images/dirigents.webp"
+            src="/images/portrait.webp"
             alt="Le dirigeant de DFA ONG"
             width={300}
             height={400}
@@ -70,23 +69,13 @@ export function MotDuPresident() {
           />
         </div>
 
-        <div className="text-gray-800 text-justify space-y-4">
+        <div className="text-gray-800 space-y-4">
           <p>
-            <strong>Chers amis et partenaires,</strong>
+            <strong>{motDeBienvenue.titreText}</strong>
           </p>
-          <p>
-            Nous sommes heureux de partager notre vision et nos projets avec
-            vous. Chez DFA ONG, nous croyons fermement que chaque individu
-            mérite une chance égale de réussir. Ensemble, nous pouvons faire une
-            différence significative dans nos communautés. Merci pour votre
-            soutien et votre engagement continu.
-          </p>
-          <p>
-            Notre association a pour but d’aider à améliorer la vie
-            socioéconomique et culturelle de la jeunesse déshéritée. Prenez donc
-            part à cette œuvre qui vise à voir sortir de l’inconscience cette
-            tranche n’ayant pas d’appuis sûrs.
-          </p>
+          {motDeBienvenue.description.map((paragraph, index) => (
+            <p key={index} className="text-justify">{paragraph}</p>
+          ))}
         </div>
       </div>
     </section>

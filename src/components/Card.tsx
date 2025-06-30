@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import Image from "next/image";
 import { ButtonLink } from "./Buttons";
 
@@ -96,3 +96,70 @@ export const CardMissionVisionValeur = ({
     </div>
   );
 };
+
+type CardProjetsProps = {
+  titre: string;
+  bgColor: string;
+  icon: string;
+  desc: string;
+};
+
+export const CardProjets = ({
+  titre,
+  bgColor,
+  icon,
+  desc,
+}: CardProjetsProps) => {
+  return (
+    <div
+      className={`flex flex-col items-center justify-start p-6 rounded-lg text-white ${bgColor} min-h-[180px]`}
+    >
+      <div className="bg-black/30 rounded-full p-4 mb-4">
+        <Image
+          src={icon}
+          alt={titre}
+          className="w-16 h-16"
+          width={500}
+          height={500}
+        />
+      </div>
+      <p className="text-center font-semibold text-xl">{titre}</p>
+      <p className="text-center text-lg">{desc}</p>
+      <ButtonLink texte="En savoir plus" href="/projets" />
+    </div>
+  );
+};
+
+interface ContactcardProps {
+  imgSrc: string;
+  titre: string;
+  linkToAction: string;
+  textButton: string;
+}
+
+export function Contactcard({
+  titre,
+  imgSrc,
+  linkToAction,
+  textButton,
+}: ContactcardProps) {
+  return (
+    <div className="rounded-2xl shadow-xl bg-white items-start p-4">
+      <Image
+        src={imgSrc}
+        alt="Whatsapp"
+        className="object-contain h-15 rounded-xl lg:mb-4 mb-2"
+        width={300}
+        height={300}
+      />
+
+      <div className="justify-between">
+        <h3 className="lg:text-lg text-sm font-normal mb-2 lg:mb-4">{titre}</h3>
+
+        <a className="justify-start">
+          <ButtonLink href={linkToAction} texte={textButton} />
+        </a>
+      </div>
+    </div>
+  );
+}

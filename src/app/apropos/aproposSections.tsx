@@ -73,7 +73,7 @@ export function MissionVisionValeurs() {
   return (
     <section className="py-16 px-4 lg:px-8">
       <TitreSection titre={missionVisionValeurData.titre} />
-      <div className="grid grid-cols-3 gap-4 lg:gap-8">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 lg:gap-8">
         {missionVisionValeurData.description.map((rubrique, index) => {
           return (
             <CardMissionVisionValeur

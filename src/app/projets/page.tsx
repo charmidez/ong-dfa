@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/Breadcumbs";
 import {TitrePage} from "@/components/Titre";
+import { NosDomainesDintervention, Nosprojets, QuelqueRealisations } from "./projectsSections";
 
 // PROJECT 
 const Page = () => {
@@ -13,6 +14,15 @@ const Page = () => {
       />
       <div className="px-8 py-4">
         <Breadcrumb />
+      </div>
+      <div>
+        <Nosprojets />
+      </div>
+      <div>
+        <NosDomainesDintervention />
+      </div>
+      <div>
+        <QuelqueRealisations />
       </div>
       </main>
     );
