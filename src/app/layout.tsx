@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 //import "../styles/menu.css";
-import Menu from "@/components/Menu";
+import {HeaderDesktop, HeaderMobile}  from "@/components/HeadersMine";
 
 import { Poppins, Quicksand, Roboto } from 'next/font/google';
 import Footer from "@/components/FooterMine";
@@ -37,8 +37,12 @@ export default function RootLayout({
       <body
         className="antialiased font-sans"
       >
-        <div className="flex flex-col justify-center">
-          <Menu />
+        <div className="lg:hidden flex flex-col justify-center">
+          <HeaderMobile />
+        </div>
+
+        <div className="hidden lg:flex flex-col justify-center">
+          <HeaderDesktop />
         </div>
         {children}
         <div>

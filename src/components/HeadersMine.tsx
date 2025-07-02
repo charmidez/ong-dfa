@@ -13,7 +13,7 @@ const menuLink = [
   { path: "/contact", label: "CONTACT" },
 ];
 
-export default function Menu() {
+export function HeaderMobile() {
   const container = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -93,7 +93,10 @@ export default function Menu() {
     }
   }, [isMenuOpen]);
 
-  return (
+
+
+  if( true ) {
+      return (
     <header
       ref={container}
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
@@ -126,7 +129,7 @@ export default function Menu() {
                         : "text-white"
                     } `}
                   >
-                    DFA <span className="text-rouge">ONG</span>
+                    ONG <span className="text-rouge">DFA</span>
                   </p>
                 </Link>
               </div>
@@ -144,8 +147,8 @@ export default function Menu() {
                     isMenuOpen
                       ? "text-white"
                       : hasScrolled
-                        ? "text-black"
-                        : "text-white"
+                      ? "text-black"
+                      : "text-white"
                   }
                     `}
                 >
@@ -156,8 +159,8 @@ export default function Menu() {
                     isMenuOpen
                       ? "/icons/close-svgrepo-com.svg"
                       : hasScrolled
-                        ? "/icons/menu-svgrepo-com.svg"
-                        : "/icons/menu-svgrepo-com-white.svg"
+                      ? "/icons/menu-svgrepo-com.svg"
+                      : "/icons/menu-svgrepo-com-white.svg"
                   }
                   alt="Logo"
                   width={46}
@@ -232,4 +235,80 @@ export default function Menu() {
       </nav>
     </header>
   );
+  } else {
+    return (
+          <header>
+      {/* Menu Bar */}
+      <div className="flex top-0 flex-row justify-center items-center">
+        <div className="w-full top-0 flex justify-center lg:px-8 px-4 py-4 z-30 ">
+          <div className="w-full">
+            <div className="flex justify-between items-center gap-2 text-white">
+              <div className="menu-logo">
+                <Link
+                  href="/"
+                  className="flex flex-row items-center gap-2 lg:gap-4 "
+                >
+                  <Image
+                    src="/logos/ico-no-bg.png"
+                    alt="Logo"
+                    width={128}
+                    height={128}
+                    className="w-16 h-16 object-contain lg:w-20 lg:h-20"
+                  />
+                  <p
+                    className={` font-bold lg:text-4xl text-2xl ${
+                      isMenuOpen
+                        ? "text-white"
+                        : hasScrolled
+                        ? "text-black"
+                        : "text-white"
+                    } `}
+                  >
+                    ONG <span className="text-rouge">DFA</span>
+                  </p>
+                </Link>
+              </div>
+
+              <button
+                aria-label="Toggle menu"
+                className="menu-toggle cursor-pointer flex flex-row items-center justify-center lg:gap-4 gap-2"
+                onClick={isMenuOpen ? closeMenu : openMenu}
+                disabled={isAnimating}
+                type="button"
+              >
+                <span
+                  className={`lg:text-4xl text-2xl font-light select-none transition-all duration-300 
+                  ${
+                    isMenuOpen
+                      ? "text-white"
+                      : hasScrolled
+                      ? "text-black"
+                      : "text-white"
+                  }
+                    `}
+                >
+                  {isMenuOpen ? "FERMER" : "MENU"}
+                </span>
+                <Image
+                  src={
+                    isMenuOpen
+                      ? "/icons/close-svgrepo-com.svg"
+                      : hasScrolled
+                      ? "/icons/menu-svgrepo-com.svg"
+                      : "/icons/menu-svgrepo-com-white.svg"
+                  }
+                  alt="Logo"
+                  width={46}
+                  height={46}
+                  className="w-10 h-10 object-contain lg:w-12 lg:h-12"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    )
+  }
 }
+
