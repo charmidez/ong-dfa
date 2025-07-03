@@ -59,14 +59,14 @@ export const nosDomainesDinterventionData = {
     },
 
                     {
-      titre: "Promotion et developpement de la jeune fille",
-      desc: `Le développement de la jeune fille constitue un pilier essentiel de l’action de l’ONG DFA, à travers des programmes axés sur l’éducation, 
-      l’autonomisation et la sensibilisation aux droits. Nous œuvrons pour garantir à chaque jeune fille un environnement sûr, 
+      titre: "Protection de la petite enfance",
+      desc: `Le développement de la petite enfance constitue un pilier essentiel de l’action de l’ONG DFA, à travers des programmes axés sur l’éducation, 
+      l’autonomisation et la sensibilisation aux droits. Nous œuvrons pour garantir à chaque enfant un environnement sûr, 
       équitable et propice à son épanouissement personnel et professionnel.`,
       objectif:
-        "Garantir le respect de droits de la femme.",
+        "Garantir le respect de droits de l'enfant.",
       bgColor: "bg-pink-900",
-      icon: "/icons/fille.png",
+      icon: "/icons/children-svgrepo-com.svg",
     },
   ],
 };

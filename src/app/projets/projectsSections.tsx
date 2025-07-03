@@ -9,7 +9,7 @@ export function Nosprojets() {
   return (
     <section className="py-16 px-4 lg:px-8">
       <TitreSection titre={nosProjetsData.titre} />
-      <p className="text-lg text-gray-600 mb-4">{nosProjetsData.description}</p>
+      <p className=" text-gray-600 mb-4">{nosProjetsData.description}</p>
     </section>
   );
 }

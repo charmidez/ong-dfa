@@ -30,7 +30,7 @@ export function PresentationGenerale() {
           );
         } else {
           return (
-            <p key={index} className="text-lg text-gray-600 mb-4">
+            <p key={index} className=" text-gray-600 mb-4">
               {paragraphe}
             </p>
           );

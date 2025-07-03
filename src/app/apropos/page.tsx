@@ -6,7 +6,7 @@ import {
   Partenanriat,
   PresentationGenerale,
 } from "./aproposSections";
-import { SectionReveal } from "@/components/SectionReveal";
+
 
 // A PROPOS
 const Page = () => {

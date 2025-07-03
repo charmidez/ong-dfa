@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/Breadcumbs";
 import { TitrePage } from "@/components/Titre";
 import { ContactButton, ContactForm } from "./contactSections";
-import { SectionReveal } from "@/components/SectionReveal";
+
 
 // CONTACT
 const Page = () => {
@@ -22,17 +22,6 @@ const Page = () => {
           <ContactButton />
         </div>
 
-        <div>
-          <ContactForm />
-        </div>
-
-        <div className="px-8 py-4">
-          <Breadcrumb />
-        </div>
-
-        <div>
-          <ContactButton />
-        </div>
         <div>
           <ContactForm />
         </div>

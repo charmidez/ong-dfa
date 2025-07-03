@@ -110,7 +110,7 @@ export function Header({ typeMenu }: HeaderProps) {
     <nav className="hidden lg:flex items-center space-x-6">
       <MenuItemColor
         texte="PROJET 1"
-        href="/projets-1"
+        href="/"
         src="/logos/ico-no-bg.png"
         className={` ${
           hasScrolled
@@ -120,7 +120,7 @@ export function Header({ typeMenu }: HeaderProps) {
       />
       <MenuItemColor
         texte="PROJET 2"
-        href="/projets-2"
+        href="/"
         src="/logos/ico-no-bg.png"
         className={`${
           hasScrolled
@@ -184,7 +184,7 @@ export function Header({ typeMenu }: HeaderProps) {
           <li className="mb-4">
             <MenuItemColor
               texte="PROJET 1"
-              href="/projets-1"
+              href="/"
               src="/logos/ico-no-bg.png"
               className={` ${
                 hasScrolled
@@ -196,7 +196,7 @@ export function Header({ typeMenu }: HeaderProps) {
           <li>
             <MenuItemColor
               texte="PROJET 2"
-              href="/projets-2"
+              href="/"
               src="/logos/ico-no-bg.png"
               className={`${
                 hasScrolled

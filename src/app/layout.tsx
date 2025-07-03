@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 //import "../styles/menu.css";
-import { Header, HeaderTop } from "@/components/HeadersMine";
+import { Header } from "@/components/HeadersMine";
 
 import { Poppins, Quicksand, Roboto } from "next/font/google";
 import Footer from "@/components/FooterMine";
-import HeaderReveal from "@/components/HeadeReveal";
-import {
-  PageTransitionLayout,
-  PageTransitionProvider,
-} from "@/components/PageTransitionLayouts";
 
 const quicksand = Quicksand({
   subsets: ["latin"], // Sous-ensembles requis

@@ -1,5 +1,4 @@
 import Breadcrumb from "@/components/Breadcumbs";
-import { SectionReveal } from "@/components/SectionReveal";
 import { TitrePage } from "@/components/Titre";
 
 //  ACTUALLITÉS
