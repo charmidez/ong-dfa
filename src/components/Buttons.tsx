@@ -30,32 +30,80 @@ export function ButtonLink({ texte, href, src, className }: ButtonLinkProps) {
   );
 }
 
-/*
-interface MenuItemProps {
-  texte: string;
-  href: string;
-  src: string; // Optional, if you want to add an icon
-}
-*/
-
 export function MenuItem({ texte, href, src }: ButtonLinkProps) {
   return (
-
-      <Link
-        href={href}
-        className="inline-flex items-center gap-2 font-bold text-black hover:underline underline-offset-4 transition-all"
-      >
-        <span>{texte}</span>
-        {src && (
-          <Image
-            src={src}
-            alt=""
-            width={20}
-            height={20}
-            className="object-contain"
-          />
-        )}
-      </Link>
-
+    <Link
+      href={href}
+      className="inline-flex items-center gap-2 font-bold text-black hover:underline underline-offset-4 transition-all"
+    >
+      <span>{texte}</span>
+      {src && (
+        <Image
+          src={src}
+          alt=""
+          width={20}
+          height={20}
+          className="object-contain"
+        />
+      )}
+    </Link>
   );
 }
+
+export function MenuItemColor({
+  texte,
+  href,
+  src,
+  className,
+}: ButtonLinkProps) {
+  return (
+    <Link
+      href={href}
+      className={`hover:underline inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium whitespace-nowrap transition ${className}`}
+    >
+      {src && (
+        <Image
+          src={src}
+          alt=""
+          width={24}
+          height={24}
+          className="object-contain"
+        />
+      )}
+      <span>{texte}</span>
+    </Link>
+  );
+}
+
+
+
+export function MenuItemLine({
+  texte,
+  href,
+  src,
+  className,
+}: ButtonLinkProps) {
+  return (
+    <Link
+      href={href}
+      className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium whitespace-nowrap transition ${className}`}
+    >
+      {src && (
+        <Image
+          src={src}
+          alt=""
+          width={24}
+          height={24}
+          className="object-contain"
+        />
+      )}
+      <span>{texte}</span>
+    </Link>
+  );
+}
+
+
+
+
+
+

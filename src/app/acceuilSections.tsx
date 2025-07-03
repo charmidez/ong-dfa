@@ -12,10 +12,10 @@ export function Slider() {
     <div className="lg:bg-[url('/images/slide-1.webp')] bg-[url('/images/slide-1-1.webp')] bg-cover bg-top justify-center pt-20 lg:pt-30 lg:px-8 px-4">
       <div className="flex flex-col items-start justify-center lg:pb-90 pb-44 pt-10">
         <div className="text-white lg:w-96">
-          <h1 className="text-2xl lg:text-4xl font-bold text-start">
+          <h1 className="text-titre-page font-bold text-start">
             {sliderData.titre}
           </h1>
-          <p className="text-lg font-light text-start mt-2">
+          <p className="text-texte-normal font-light text-start mt-2">
             {sliderData.description}
           </p>
           <div className="w-fit mt-4">

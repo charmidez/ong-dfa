@@ -19,8 +19,37 @@
   --color-vert-fonce: #2E6002;
   --color-vert-milieu: #2F6203;
   --color-vert-clair: #4F9503;
-  --color-rouge: #CA2725;
+
+  --color-rouge-fonce: #891A19;
+  --color-rouge-milieu: #CA2725;
+  --color-rouge-clair: #F26D6C;
+
+  --color-orange-clair: #FACA15;
+  --color-orange-milieu: #FBBF24;
+  --color-orange-fonce: #C97A12;
+
+  --color-jaune-fonce : #FBBF24;
+  --color-jaune-milieu : #FBBF24;
+  --color-jaune-clair : #FBBF24;
+
+  --color-bleu-fonce : #4F9503;
+  --color-bleu-milieu : #4F9503;
+  --color-bleu-clair : #4F9503;
+
   --color-green-dark-transparent: rgba(0, 30, 0, 0.9);
+  --color-white-transparent: rgba(255, 255, 255, 0.9);
+
+
+
+  --text-titre-page: clamp(2rem, 3vw, 2.5rem);              /* ≈ 32-40px */
+  --text-titre-section: clamp(1.5rem, 2vw, 1.75rem);      /* ≈ 24-28px */
+  --text-tire-sous-titre: clamp(1.125rem, 1.5vw, 1.25rem);   /* ≈ 18-20px */
+
+  --text-texte-normal: clamp(0.875rem, 1vw, 0.91rem);       /* ≈ 14-15px */
+  --text-texte-citation: clamp(0.8125rem, 0.9vw, 0.875rem); /* ≈ 13-14px */
+  --text-texte-legende: clamp(0.75rem, 0.8vw, 0.8125rem);    /* ≈ 12-13px */
+
+
 }
 
 
@@ -47,4 +76,44 @@ body {
   }
 }
 
+
+@layer base {
+  :root {
+    /* ---- Taille normale (≈ 11pt Word = 14.5px) ---- */
+    --fs-text-normale: clamp(0.875rem, 1vw, 0.91rem); /* ≈ 14-15px */
+
+    /* ---- Petites tailles ---- */
+    --fs-text-legende: clamp(0.75rem, 0.8vw, 0.8125rem);   /* ≈ 12-13px */
+    --fs-text-citation: clamp(0.8125rem, 0.9vw, 0.875rem); /* ≈ 13-14px */
+
+    /* ---- Titres ---- */
+    --fs-titre-normale: clamp(1.125rem, 1.5vw, 1.25rem);   /* ≈ 18-20px */
+    --fs-titre-section: clamp(1.5rem, 2vw, 1.75rem);       /* ≈ 24-28px */
+    --fs-titre-page: clamp(2rem, 3vw, 2.5rem);             /* ≈ 32-40px */
+  }
+
+  .titrePage {
+    font-size: var(--fs-titre-page);
+  }
+
+  .titreSection {
+    font-size: var(--fs-titre-section);
+  }
+
+  .titreNormale {
+    font-size: var(--fs-titre-normale);
+  }
+
+  .textNormale {
+    font-size: var(--fs-text-normale);
+  }
+
+  .textLegende {
+    font-size: var(--fs-text-legende);
+  }
+
+  .textCitation {
+    font-size: var(--fs-text-citation);
+  }
+}
 

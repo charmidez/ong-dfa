@@ -16,7 +16,7 @@ const Footer = () => {
               width={500}
               height={500}
             />
-            <h1 className="text-4xl text-center font-light"><span className="text-vert-milieu font-bold">DFA ONG</span> Developpement For All</h1>
+            <h1 className="text-titre-page text-center font-light"><span className="text-vert-milieu font-bold">DFA ONG</span> Developpement For All</h1>
           </div>
 
           <div className="flex flex-col items-center gap-4">
@@ -75,7 +75,7 @@ const Footer = () => {
               </li>
             </ul>
 
-            <ul className="font-semibold space-y-1">
+            <ul className="font-light space-y-1">
               <li><MenuItem texte={"F.A.Q"} href={"/f-a-q"} src="/icons/up-right-svgrepo-com.svg"/></li>
               <li><MenuItem texte={"Ce que nous faisons"} href={"/ce-que-nous-faisons"} src="/icons/up-right-svgrepo-com.svg"/></li>
               <li><MenuItem texte={"Contact et adresse"} href={"/contact"} src="/icons/up-right-svgrepo-com.svg"/></li>

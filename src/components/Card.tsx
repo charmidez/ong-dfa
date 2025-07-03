@@ -29,8 +29,8 @@ export const Cardinfo = ({
 
       <div className="flex flex-col flex-grow justify-between p-4 gap-4">
         <div>
-          <h2 className="text-lg text-rouge font-bold">{titreCard}</h2>
-          <p className="text-sm text-gray-400">{descCard}</p>
+          <h2 className="text-titre-sous-titre text-rouge font-bold">{titreCard}</h2>
+          <p className="text-legende text-gray-400">{descCard}</p>
         </div>
         <div className="w-fit">
           <ButtonLink texte="Lire" href={linkInfo} />
@@ -91,8 +91,8 @@ export const CardMissionVisionValeur = ({
           height={100}
         />
       </div>
-      <p className="text-center font-semibold text-xl">{titre}</p>
-      <p className="text-center text-lg">{desc}</p>
+      <p className="text-center font-semibold text-tire-sous-titre">{titre}</p>
+      <p className="text-center text-texte-normal">{desc}</p>
     </div>
   );
 };

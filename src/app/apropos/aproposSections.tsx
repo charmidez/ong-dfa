@@ -24,7 +24,7 @@ export function PresentationGenerale() {
           const suite = mots.slice(4).join(" ");
 
           return (
-            <p key={index} className="text-lg text-gray-600 mb-4">
+            <p key={index} className="text-texte-normal text-gray-600 mb-4">
               <strong>{debut}</strong> {suite}
             </p>
           );

@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 //import "../styles/menu.css";
-import {HeaderDesktop, HeaderMobile}  from "@/components/HeadersMine";
+import { Header, HeaderTop } from "@/components/HeadersMine";
 
-import { Poppins, Quicksand, Roboto } from 'next/font/google';
+import { Poppins, Quicksand, Roboto } from "next/font/google";
 import Footer from "@/components/FooterMine";
 
 const quicksand = Quicksand({
-  subsets: ['latin'],            // Sous-ensembles requis
-  variable: '--font-quicksand',
+  subsets: ["latin"], // Sous-ensembles requis
+  variable: "--font-quicksand",
 });
 
 const poppins = Poppins({
-  subsets: ['latin'],            // Sous-ensembles requis
-  variable: '--font-poppins',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], // Poids de police requis
+  subsets: ["latin"], // Sous-ensembles requis
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // Poids de police requis
 });
 
 const roboto = Roboto({
-  subsets: ['latin'], 
-  variable: '--font-roboto',
+  subsets: ["latin"],
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -33,16 +33,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${poppins.variable} ${quicksand.variable} ${roboto.variable} antialiased`}>
-      <body
-        className="antialiased font-sans"
-      >
+    <html
+      lang="fr"
+      className={`${poppins.variable} ${quicksand.variable} ${roboto.variable} antialiased`}
+    >
+      <body className="antialiased font-sans text-texte-normal">
         <div className="lg:hidden flex flex-col justify-center">
-          <HeaderMobile />
+          <Header typeMenu={true} />
         </div>
-
-        <div className="hidden lg:flex flex-col justify-center">
-          <HeaderDesktop />
+        <div className="lg:flex hidden flex-col justify-center">
+          <Header typeMenu={false} />
         </div>
         {children}
         <div>
