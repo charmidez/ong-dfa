@@ -19,7 +19,7 @@ export function NosDomainesDintervention() {
     /* NosDomainesDintervention */
   }
   return (
-    <section className="py-16 px-4 lg:px-8 bg-gray-50">
+    <section className="py-16 px-4 lg:px-8 bg-gray-100">
       <TitreSection titre={nosDomainesDinterventionData.titre} />
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 lg:gap-8">
               {nosDomainesDinterventionData.description.map((rubrique, index) => {

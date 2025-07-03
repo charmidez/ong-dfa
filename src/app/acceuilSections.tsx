@@ -1,7 +1,8 @@
 import { ButtonLink } from "@/components/Buttons";
 import { CardDomaine, Cardinfo } from "@/components/Card";
 import { TitreSection } from "@/components/Titre";
-import { actualitesData, domaines, motDeBienvenue, sliderData } from "@/data/acceuilData";
+import { domaines, motDeBienvenue, sliderData } from "@/data/acceuilData";
+import { actualitesData } from "@/data/actualiteData";
 import Image from "next/image";
 
 export function Slider() {
@@ -32,11 +33,11 @@ export function Actualites() {
     /* Actualité */
   }
   return (
-    <div className="flex flex-col py-16 px-4 lg:px-8 bg-mine-gray">
+    <div className="flex flex-col py-16 px-4 lg:px-8 bg-gray-100">
       <TitreSection titre="Actualités" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Données et liste à récupérer depuis la base de données avec le composant carte*/}
-        {actualitesData.map((article, index) => (
+        {actualitesData.slice(-4).map((article, index) => (
           <Cardinfo
             key={index}
             titreCard={article.titre}

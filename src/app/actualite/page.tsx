@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/Breadcumbs";
 import { TitrePage } from "@/components/Titre";
+import { AllActualites, RecrutementAnnonces } from "./actualiteSections";
 
 //  ACTUALLITÉS
 const Page = () => {
@@ -13,6 +14,14 @@ const Page = () => {
 
       <div className="px-8 py-4">
         <Breadcrumb />
+      </div>
+
+      <div>
+        <RecrutementAnnonces />
+      </div>
+
+      <div>
+        <AllActualites />
       </div>
     </main>
   );

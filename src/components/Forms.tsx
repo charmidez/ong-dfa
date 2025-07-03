@@ -53,7 +53,7 @@ export function Form(){
   };
 
   return (
-    <div className="shadow-2xl p-8 rounded-3xl">
+    <div className="shadow-lg p-8 rounded-lg">
 
       {submitted && (
         <div className="mb-4 text-green-600 font-semibold">

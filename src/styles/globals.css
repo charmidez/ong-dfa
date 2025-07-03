@@ -41,9 +41,9 @@
 
 
 
-  --text-titre-page: clamp(2rem, 3vw, 2.5rem);              /* ≈ 32-40px */
-  --text-titre-section: clamp(1.5rem, 2vw, 1.75rem);      /* ≈ 24-28px */
-  --text-tire-sous-titre: clamp(1.125rem, 1.5vw, 1.25rem);   /* ≈ 18-20px */
+  --text-titre-page: clamp(1.75rem, 2.5vw, 2.25rem);         /* ≈ 28–36px */
+  --text-titre-section: clamp(1.375rem, 1.8vw, 1.625rem);    /* ≈ 22–26px */
+  --text-titre-sous-titre: clamp(1rem, 1.2vw, 1.125rem);
 
   --text-texte-normal: clamp(0.875rem, 1vw, 0.91rem);       /* ≈ 14-15px */
   --text-texte-citation: clamp(0.8125rem, 0.9vw, 0.875rem); /* ≈ 13-14px */

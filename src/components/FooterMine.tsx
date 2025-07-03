@@ -1,6 +1,6 @@
 //import Link from "next/link";
 import Image from "next/image";
-import {ButtonLink, MenuItem} from "./Buttons";
+import { ButtonLink, MenuItem } from "./Buttons";
 import { nomDuSite, nomDuSiteDefini } from "@/data/globalData";
 
 const Footer = () => {
@@ -17,11 +17,21 @@ const Footer = () => {
               width={500}
               height={500}
             />
-            <h1 className="text-titre-page text-center font-light"><span className="text-vert-milieu font-bold">{nomDuSite}</span> - {nomDuSiteDefini}</h1>
+            <h1 className="text-titre-page text-center font-light">
+              <span className="text-vert-milieu font-bold">{nomDuSite}</span> -{" "}
+              {nomDuSiteDefini}
+            </h1>
           </div>
 
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-row gap-4">
+              <Image
+                src="/icons/icons8-linkedin.svg"
+                alt="facebook"
+                className="w-8"
+                width={100}
+                height={100}
+              />
               <Image
                 src="/icons/facebook-svgrepo-com.svg"
                 alt="facebook"
@@ -66,25 +76,67 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row gap-8 lg:gap-20">
             <ul className="font-semibold space-y-1">
               <li>
-                <ButtonLink texte={"Don"} href={"/don"} src="/icons/gift-svgrepo-com.svg"/>
+                <ButtonLink
+                  texte={"Don"}
+                  href={"/don"}
+                  src="/icons/gift-svgrepo-com.svg"
+                />
               </li>
               <li>
-                <ButtonLink texte={"Apport"} href={"/apport"} src="/icons/hand-heart-svgrepo-com.svg"/>
+                <ButtonLink
+                  texte={"Apport"}
+                  href={"/apport"}
+                  src="/icons/hand-heart-svgrepo-com.svg"
+                />
               </li>
               <li>
-                <ButtonLink texte={"Partenariats"} href={"/partenaire"} src="/icons/agreement-deal-friends-svgrepo-com.svg"/>
+                <ButtonLink
+                  texte={"Partenariats"}
+                  href={"/partenaire"}
+                  src="/icons/agreement-deal-friends-svgrepo-com.svg"
+                />
               </li>
             </ul>
 
             <ul className="font-light space-y-1">
-              <li><MenuItem texte={"F.A.Q"} href={"/f-a-q"} src="/icons/up-right-svgrepo-com.svg"/></li>
-              <li><MenuItem texte={"Ce que nous faisons"} href={"/ce-que-nous-faisons"} src="/icons/up-right-svgrepo-com.svg"/></li>
-              <li><MenuItem texte={"Contact et adresse"} href={"/contact"} src="/icons/up-right-svgrepo-com.svg"/></li>
-              <li><MenuItem texte={"Mentions légales"} href={"/mentions-legales"} src="/icons/up-right-svgrepo-com.svg"/></li>
-              <li><MenuItem texte={"Termes et conditions"} href={"/termes-et-conditions"} src="/icons/up-right-svgrepo-com.svg"/></li>
+              <li>
+                <MenuItem
+                  texte={"F.A.Q"}
+                  href={"/f-a-q"}
+                  src="/icons/up-right-svgrepo-com.svg"
+                />
+              </li>
+              <li>
+                <MenuItem
+                  texte={`Nos domaines d'activité`}
+                  href={"/nos-domaines-dactivite"}
+                  src="/icons/up-right-svgrepo-com.svg"
+                />
+              </li>
+              <li>
+                <MenuItem
+                  texte={"Contact et adresse"}
+                  href={"/contact"}
+                  src="/icons/up-right-svgrepo-com.svg"
+                />
+              </li>
+              <li>
+                <MenuItem
+                  texte={"Mentions légales"}
+                  href={"/mentions-legales"}
+                  src="/icons/up-right-svgrepo-com.svg"
+                />
+              </li>
+              <li>
+                <MenuItem
+                  texte={"Termes et conditions"}
+                  href={"/termes-et-conditions"}
+                  src="/icons/up-right-svgrepo-com.svg"
+                />
+              </li>
             </ul>
           </div>
-
+          {/* Contact et adresse  */}
           <ul className="font-semibold space-y-2">
             <li className="flex items-center gap-2">
               <Image

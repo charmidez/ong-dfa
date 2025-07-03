@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import { ButtonLink } from "./Buttons";
+import { ButtonLink, ButtonLinkRecrutement } from "./Buttons";
 
 type CardinfoProps = {
   titreCard: string;
@@ -91,7 +91,7 @@ export const CardMissionVisionValeur = ({
           height={100}
         />
       </div>
-      <p className="text-center font-semibold text-tire-sous-titre">{titre}</p>
+      <p className="text-center font-semibold text-titre-sous-titre">{titre}</p>
       <p className="text-center text-texte-normal">{desc}</p>
     </div>
   );
@@ -144,7 +144,7 @@ export function Contactcard({
   textButton,
 }: ContactcardProps) {
   return (
-    <div className="rounded-2xl shadow-xl bg-white items-start p-4">
+    <div className="rounded-lg shadow-lg bg-white items-start p-4">
       <Image
         src={imgSrc}
         alt="Whatsapp"
@@ -162,4 +162,22 @@ export function Contactcard({
       </div>
     </div>
   );
+}
+
+
+interface CardRecrutementAnoncesProps {
+  titre: string;
+  linkToAction: string;
+  textButton: string;
+  dateLimite?: string;
+}
+
+export function CardRecrutementAnonces({ titre, linkToAction, textButton, dateLimite }: CardRecrutementAnoncesProps) {
+  return(
+    <div className="bg-red-50 border-l-2 border-rouge-milieu p-4 ">
+      <p className="font-semibold text-titre-sous-titre">Offre à soumettre avant le {dateLimite}</p>
+      <h2>{titre}</h2>
+      <ButtonLinkRecrutement href={linkToAction} texte={textButton} />
+    </div>
+  )
 }

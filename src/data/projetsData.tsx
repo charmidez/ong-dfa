@@ -59,7 +59,7 @@ export const nosDomainesDinterventionData = {
     },
 
                     {
-      titre: "Protection de la petite enfance",
+      titre: "Protection de l'enfant",
       desc: `Le développement de la petite enfance constitue un pilier essentiel de l’action de l’ONG DFA, à travers des programmes axés sur l’éducation, 
       l’autonomisation et la sensibilisation aux droits. Nous œuvrons pour garantir à chaque enfant un environnement sûr, 
       équitable et propice à son épanouissement personnel et professionnel.`,

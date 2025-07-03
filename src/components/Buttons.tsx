@@ -75,14 +75,7 @@ export function MenuItemColor({
   );
 }
 
-
-
-export function MenuItemLine({
-  texte,
-  href,
-  src,
-  className,
-}: ButtonLinkProps) {
+export function MenuItemLine({ texte, href, src, className }: ButtonLinkProps) {
   return (
     <Link
       href={href}
@@ -102,8 +95,24 @@ export function MenuItemLine({
   );
 }
 
-
-
-
-
-
+export function ButtonLinkRecrutement({
+  texte,
+  href,
+  className,
+}: ButtonLinkProps) {
+  return (
+    <Link
+      href={href}
+      className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-rouge-clair text-white font-medium hover:bg-rouge-fonce w-fit transition ${className}`}
+    >
+      <span>{texte}</span>
+      <Image
+        src="/icons/up-right-svgrepo-com-white.svg"
+        alt=""
+        width={20}
+        height={20}
+        className="object-contain"
+      />
+    </Link>
+  );
+}
