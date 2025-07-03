@@ -1,6 +1,12 @@
 import Breadcrumb from "@/components/Breadcumbs";
 import { TitrePage } from "@/components/Titre";
-import { CarouselAuto, MissionVisionValeurs, Partenanriat, PresentationGenerale } from "./aproposSections";
+import {
+  CarouselAuto,
+  MissionVisionValeurs,
+  Partenanriat,
+  PresentationGenerale,
+} from "./aproposSections";
+import { SectionReveal } from "@/components/SectionReveal";
 
 // A PROPOS
 const Page = () => {
@@ -11,18 +17,23 @@ const Page = () => {
         description="DFA agit par des projets concrets pour transformer les conditions de vie."
         className="bg-[url('/images/titre-a-propos.webp')] bg-cover bg-center"
       />
+
       <div className="px-8 py-4">
         <Breadcrumb />
       </div>
+
       <div>
         <PresentationGenerale />
       </div>
+
       <div>
         <CarouselAuto />
       </div>
+
       <div>
         <MissionVisionValeurs />
       </div>
+
       <div>
         <Partenanriat />
       </div>

@@ -71,9 +71,9 @@ export const domaines = [
     icon: "/icons/infrastructure.png",
   },
   {
-    titre: "PROMOTION DE LA JEUNE FILLE",
+    titre: "PROTECTION DE LA PETITE ENFANCE",
     bgColor: "bg-yellow-600",
-    icon: "/icons/fille.png",
+    icon: "/icons/children-svgrepo-com.svg",
   },
 ];
 

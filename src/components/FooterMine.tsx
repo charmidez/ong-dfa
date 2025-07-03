@@ -1,6 +1,7 @@
 //import Link from "next/link";
 import Image from "next/image";
 import {ButtonLink, MenuItem} from "./Buttons";
+import { nomDuSite, nomDuSiteDefini } from "@/data/globalData";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
               width={500}
               height={500}
             />
-            <h1 className="text-titre-page text-center font-light"><span className="text-vert-milieu font-bold">DFA ONG</span> Developpement For All</h1>
+            <h1 className="text-titre-page text-center font-light"><span className="text-vert-milieu font-bold">{nomDuSite}</span> - {nomDuSiteDefini}</h1>
           </div>
 
           <div className="flex flex-col items-center gap-4">

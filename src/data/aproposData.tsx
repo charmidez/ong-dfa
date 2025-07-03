@@ -57,9 +57,7 @@ export const missionVisionValeurData = {
         titre : "Valeurs",
         desc : `Engagement - Nous nous consacrons entièrement à notre mission et à nos bénéficiaires, en travaillant sans relâche pour atteindre nos objectifs.
         Innovation - Nous cherchons constamment des solutions nouvelles et efficaces pour relever les défis locaux et améliorer les conditions de vie.
-        Collaboration - Nous valorisons le travail en partenariat avec les communautés locales, les gouvernements, et les autres organisations pour maximiser notre impact.
-        Transparence - Nous nous engageons à être ouverts et honnêtes dans toutes nos actions et à rendre des comptes à nos partenaires et bénéficiaires.
-        Respect - Nous respectons la dignité et les droits de chaque individu, en promouvant l’égalité et l'inclusion dans toutes nos initiatives.`,
+        Collaboration`,
         bgColor : "bg-blue-900",
         icon : "/icons/valeur.png",
     },
