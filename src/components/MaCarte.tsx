@@ -7,7 +7,8 @@ import L from "leaflet";
 //import { useEffect } from "react";
 
 // Fix pour l'icône de marker par défaut dans Next.js
-delete (L.Icon.Default as any).prototype._getIconUrl;
+//delete (L.Icon.Default as any).prototype._getIconUrl;
+delete (L.Icon.Default as unknown as { prototype: { _getIconUrl?: () => void } }).prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: "/leaflet/marker-icon-2x.png",
