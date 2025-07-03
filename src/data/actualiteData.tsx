@@ -3,7 +3,7 @@ import {
   RoleEssentielONG,
   RetraitONGNonConformes,
   CollaborationInternationaleONG,
-} from "@/app/actualite/actualiteComponent";
+} from "@/app/actualites/actualiteComponent";
 
 export const actualitesData = [
   {

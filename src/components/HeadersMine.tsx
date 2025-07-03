@@ -12,7 +12,7 @@ const menuLink = [
   { path: "/", label: "BIENVENUE" },
   { path: "/apropos", label: "À PROPOS" },
   { path: "/projets", label: "PROJETS" },
-  { path: "/actualite", label: "ACTUALITE" },
+  { path: "/actualites", label: "ACTUALITE" },
   { path: "/contact", label: "CONTACT" },
 ];
 

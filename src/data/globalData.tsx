@@ -1,4 +1,3 @@
-
 export const nomDuSite : string = "ONG DFA";
 export const nomDuSiteDefini : string = "Development For All";
 

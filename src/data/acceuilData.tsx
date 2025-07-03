@@ -1,7 +1,3 @@
-
-
-
-
 export const domaines = [
   {
     titre: "FORMATION",
