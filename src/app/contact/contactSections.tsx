@@ -1,5 +1,6 @@
 import { Contactcard } from "@/components/Card";
 import { Form } from "@/components/Forms";
+import MapCarte from "@/components/MaCarte";
 import { TitreSection } from "@/components/Titre";
 
 
@@ -20,9 +21,19 @@ export function ContactButton() {
 
 export function ContactForm() {
   return (
-    <div className="py-16 px-4 lg:px-8 bg-gray-50">
+    <div className="py-16 px-4 lg:px-8 bg-gray-100">
       <TitreSection titre="Nous contacter" />
       <Form />
+    </div>
+  );
+}
+
+
+export function ContactMaps() {
+  return (
+    <div className="py-16 px-4 lg:px-8">
+      <TitreSection titre="Nous rendre visites" />
+      <MapCarte latitude={6.133654} longitude={1.223112} zoom={20} title="Nous sommes ici !"/>
     </div>
   );
 }

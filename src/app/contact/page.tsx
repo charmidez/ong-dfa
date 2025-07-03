@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/Breadcumbs";
 import { TitrePage } from "@/components/Titre";
-import { ContactButton, ContactForm } from "./contactSections";
+import { ContactButton, ContactForm, ContactMaps } from "./contactSections";
 
 
 // CONTACT
@@ -24,6 +24,9 @@ const Page = () => {
 
         <div>
           <ContactForm />
+        </div>
+        <div>
+          <ContactMaps />
         </div>
       </main>
     );
