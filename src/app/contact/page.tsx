@@ -1,8 +1,10 @@
-"use client"
 
 import Breadcrumb from "@/components/Breadcumbs";
 import { TitrePage } from "@/components/Titre";
-import { ContactButton, ContactForm, ContactMaps } from "./contactSections";
+import { ContactButton, ContactForm } from "./contactSections";
+import {ContactMaps} from "@/components/ContactMapsClient";
+
+
 
 
 // CONTACT
