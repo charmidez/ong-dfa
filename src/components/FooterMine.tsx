@@ -192,7 +192,7 @@ const Footer = () => {
 
       <div className="bg-gray-800 py-4 flex justify-center">
         <p className="text-mine-footer lg:text-sm text-gray-400 font-semibold text-center px-4">
-          © 2025 DFA ONG - Design & Developed By Charmidez
+          © 2025 DFA ONG - Design & Developed By <a href="https://www.charmidez.com">{" "}Charmidez</a>
         </p>
       </div>
     </>

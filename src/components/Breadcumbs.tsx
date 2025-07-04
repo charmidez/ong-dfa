@@ -1,5 +1,6 @@
 
 'use client'
+import { nomDuSite } from '@/data/globalData'
 import Link from 'next/dist/client/link'
 import { usePathname } from 'next/navigation'
 
@@ -9,6 +10,7 @@ export default function Breadcrumb() {
 
   return (
     <nav className="text-texte-legende flex flex-wrap gap-1">
+      <Link href="/" className="text-vert-fonce hover:text-vert-clair">{nomDuSite} - </Link>
       {segments.map((segment, index) => {
         const isLast = index === segments.length - 1
         return (
@@ -19,7 +21,7 @@ export default function Breadcrumb() {
                 isLast ? 'font-medium text-black' : 'text-rouge-fonce hover:text-rouge-clair'
               }`}
             >
-              <Link href="/" className='text-rouge-fonce'>ONG-DFA </Link> - {decodeURIComponent(segment).replace(/-/g, ' ')}
+             {decodeURIComponent(segment).replace(/-/g, ' ')}
             </span>
           </span>
         )

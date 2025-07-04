@@ -43,7 +43,7 @@ export function Actualites() {
             titreCard={article.titre}
             descCard={article.resume}
             image={article.image}
-            linkInfo={`/${article.slug}`}
+            linkInfo={`/actualites/${article.slug}`}
           />
         ))}
       </div>

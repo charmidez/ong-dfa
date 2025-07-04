@@ -1,21 +1,27 @@
 import { Cardinfo, CardRecrutementAnonces } from "@/components/Card";
-import { TitreSection } from "@/components/Titre";
-import { actualitesData, annonceRecrutemntData } from "@/data/actualiteData";
+import { TitreSection, TitreSectionRecrutement } from "@/components/Titre";
+import { actualitesData } from "@/data/actualiteData";
+import { annonceRecrutemntData } from "@/data/recrutementData";
 
 export function RecrutementAnnonces() {
   return (
-    <section className="py-16 px-4 lg:px-8 flex flex-col lg:gap-16 gap-8 lg:flex-row">
-      {annonceRecrutemntData.map((annonce) => {
-        return (
-          <CardRecrutementAnonces
-            key={annonce.id}
-            titre={annonce.titre}
-            dateLimite={annonce.dateLimite}
-            linkToAction={annonce.linkToAction}
-            textButton={annonce.textButton}
-          />
-        );
-      })}
+    <section className="py-16 px-4 lg:px-8 flex flex-col">
+      <TitreSectionRecrutement
+        titre="Annonces de recrutement"
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {annonceRecrutemntData.map((annonce) => {
+          return (
+            <CardRecrutementAnonces
+              key={annonce.id}
+              titre={annonce.titre}
+              dateLimite={annonce.dateLimite}
+              linkToAction={annonce.linkToAction}
+              textButton={annonce.textButton}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 }

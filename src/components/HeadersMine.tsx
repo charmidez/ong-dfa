@@ -94,11 +94,11 @@ export function Header({ typeMenu }: HeaderProps) {
         alt="Logo"
         width={128}
         height={128}
-        className="w-16 h-16 object-contain lg:w-16 lg:h-16"
+        className={` ${ hasScrolled ? "w-8 h-8 object-contain lg:w-10 lg:h-10" : "w-16 h-16 object-contain lg:w-24 lg:h-24" }`}
       />
       <p
         className={`font-bold text-titre-page ${
-          isMenuOpen ? "text-white" : hasScrolled ? "text-black" : "text-white"
+          isMenuOpen ? "text-white" : hasScrolled ? "text-vert-fonce" : "text-white"
         }`}
       >
         ONG DFA
@@ -253,7 +253,7 @@ export function Header({ typeMenu }: HeaderProps) {
         }`}
       >
         <div className="flex justify-center items-center">
-          <div className="w-full flex justify-center lg:px-8 px-4 py-2 z-30">
+          <div className={`w-full flex justify-center lg:px-8 px-4  z-30 ${hasScrolled ? "py-0" : "py-2"}`}>
             <div className="w-full flex justify-between items-center gap-2">
               {renderLogo()}
               {renderMenuLg()}

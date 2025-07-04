@@ -86,7 +86,7 @@ export function MissionVisionValeurs() {
           );
         })}
       </div>
-      <h3 className="border-l-4 lg:p-8 p-4 mt-4 text-texte-legende font-semibold bg-gray-50 border-rouge">{missionVisionValeurData.description2}</h3>
+      <h3 className="border-l-4 lg:p-8 p-4 mt-4 text-titre-sous-titre font-semibold bg-gray-50 border-rouge">{missionVisionValeurData.description2}</h3>
     </section>
   );
 }
