@@ -6,9 +6,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 
+/*
 interface ArticlePageProps {
   params: { slug: string };
 }
+  */
   
 
 export async function generateStaticParams() {
@@ -18,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 //  ACTUALLITÉS
-export default function Page({ params }: ArticlePageProps) {
+export default function Page({ params }: { params: { slug: string } }) {
   const article = actualitesData.find((a) => a.slug === params.slug);
 
   if (!article) return notFound();
