@@ -67,7 +67,7 @@ export const TitreSectionRecrutement = ({
   className,
 }: TitreSectionProps) => {
   return (
-    <Link href="/recrutement" className="flex flex-col items-start justify-center lg:pb-4 pb-2">
+    <Link href="/recrutements" className="flex flex-col items-start justify-center lg:pb-4 pb-2">
       <div className="flex flex-row hover:gap-2 transition-all duration-800">
         <h2 className={`text-rouge-milieu text-titre-section font-semibold uppercase ${className} `}>
           {titre}

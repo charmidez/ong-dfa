@@ -16,8 +16,8 @@ export function RecrutementAnnonces() {
               key={annonce.id}
               titre={annonce.titre}
               dateLimite={annonce.dateLimite}
-              linkToAction={annonce.linkToAction}
-              textButton={annonce.textButton}
+              linkToAction="/recrutements"
+              textButton="Voir l'annonce"
             />
           );
         })}
