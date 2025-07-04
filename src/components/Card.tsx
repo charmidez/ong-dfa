@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import { ButtonLink, ButtonLinkRecrutement } from "./Buttons";
+import { ButtonLink, ButtonLinkProjet, ButtonLinkRecrutement } from "./Buttons";
 
 type CardinfoProps = {
   titreCard: string;
@@ -170,6 +170,8 @@ interface CardRecrutementAnoncesProps {
   linkToAction: string;
   textButton: string;
   dateLimite?: string;
+  description?: string;
+  imgSrc?: string;
 }
 
 export function CardRecrutementAnonces({ titre, linkToAction, textButton, dateLimite }: CardRecrutementAnoncesProps) {
@@ -221,4 +223,25 @@ export default function JobCard({ titre, description, telephone, dateLimite }: J
       </div>
     </div>
   );
+}
+
+
+
+export function CardProjetsSecond({ titre, linkToAction, textButton, description, imgSrc }: CardRecrutementAnoncesProps) {
+  return(
+    <div className="bg-vert-clair border-l-6 border-vert-fonce p-4 space-y-4">
+      <div className="flex flex-row items-center">
+        <Image
+          src={imgSrc || "/icons/project-configuration-svgrepo-com.svg"}
+          alt="Projet"
+          className="object-contain h-15 rounded-xl mb-4"
+          width={80}
+          height={80}
+        />
+        <h2 className="font-semibold text-titre-sous-titre">{titre}</h2>
+      </div>
+      <p className="text-texte-normal">{description}</p>
+      <ButtonLinkProjet href={linkToAction} texte={textButton} />
+    </div>
+  )
 }

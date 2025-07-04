@@ -1,3 +1,5 @@
+import { button } from "framer-motion/client";
+
 export const nosProjetsData = {
   titre: "Nos Projets",
   description: `Notre ONG intervient dans plusieurs domaines clés pour améliorer les conditions de vie des populations vulnérables 
@@ -27,7 +29,7 @@ export const nosDomainesDinterventionData = {
       icon: "/icons/environnement.png",
     },
 
-        {
+    {
       titre: "Logement pour tous",
       desc: `Parce que l’accès à un logement décent est un droit fondamental, 
       nous accompagnons la construction de logements sociaux et écologiques pour les familles vulnérables, 
@@ -38,7 +40,7 @@ export const nosDomainesDinterventionData = {
       icon: "/icons/logement.png",
     },
 
-            {
+    {
       titre: "Accès aux infrastructures",
       desc: `Nous mettons en place des projets communautaires visant à améliorer l’accès à des infrastructures de base : 
       marchés, écoles, forages, réseaux de communication, etc.`,
@@ -48,29 +50,26 @@ export const nosDomainesDinterventionData = {
       icon: "/icons/infrastructure.png",
     },
 
-                {
+    {
       titre: "Bonne santé pour tous",
       desc: `La santé étant au cœur du bien-être humain, nous organisons des campagnes de sensibilisation, 
       des consultations médicales gratuites, et nous œuvrons à la mise en place de centres de santé communautaires.`,
-      objectif:
-        "Garantir un accès équitable aux soins de santé pour tous.",
+      objectif: "Garantir un accès équitable aux soins de santé pour tous.",
       bgColor: "bg-cyan-900",
       icon: "/icons/sante.png",
     },
 
-                    {
+    {
       titre: "Protection de l'enfant",
       desc: `Le développement de la petite enfance constitue un pilier essentiel de l’action de l’ONG DFA, à travers des programmes axés sur l’éducation, 
       l’autonomisation et la sensibilisation aux droits. Nous œuvrons pour garantir à chaque enfant un environnement sûr, 
       équitable et propice à son épanouissement personnel et professionnel.`,
-      objectif:
-        "Garantir le respect de droits de l'enfant.",
+      objectif: "Garantir le respect de droits de l'enfant.",
       bgColor: "bg-pink-900",
       icon: "/icons/children-svgrepo-com.svg",
     },
   ],
 };
-
 
 export const nosRealisationsData = {
   titre: "Quelques Réalisations",
@@ -78,3 +77,24 @@ export const nosRealisationsData = {
   : formation des jeunes, protection de l’environnement, accès au logement, développement d’infrastructures et santé communautaire. 
   À travers ces actions, nous visons à favoriser l’inclusion sociale, le développement durable et l’accès équitable aux ressources essentielles.`,
 };
+
+export const nosProjetsMajeursData = [
+  {
+    titre: "Projets Agricoles",
+    description: `Notre ONG intervient dans plusieurs domaines clés pour améliorer les conditions de vie des populations vulnérables 
+  : formation des jeunes, protection de l’environnement, accès au logement, développement d’infrastructures et santé communautaire. 
+  À travers ces actions, nous visons à favoriser l’inclusion sociale, le développement durable et l’accès équitable aux ressources essentielles.`,
+    link: "/projets",
+    image: "/images/projets.jpg",
+    buttonText: "En savoir plus",
+  },
+  {
+    titre: "Projets De Construction d'Infrastructures",
+    description: `Notre ONG intervient dans plusieurs domaines clés pour améliorer les conditions de vie des populations vulnérables 
+  : formation des jeunes, protection de l’environnement, accès au logement, développement d’infrastructures et santé communautaire. 
+  À travers ces actions, nous visons à favoriser l’inclusion sociale, le développement durable et l’accès équitable aux ressources essentielles.`,
+    link: "/projets",
+    image: "/images/projets.jpg",
+    buttonText: "En savoir plus",
+  },
+];

@@ -116,3 +116,28 @@ export function ButtonLinkRecrutement({
     </Link>
   );
 }
+
+
+
+
+export function ButtonLinkProjet({
+  texte,
+  href,
+  className,
+}: ButtonLinkProps) {
+  return (
+    <Link
+      href={href}
+      className={`inline-flex items-center gap-2 px-6 py-3 bg-vert-fonce text-white font-medium hover:bg-vert-fonce w-fit transition ${className}`}
+    >
+      <span>{texte}</span>
+      <Image
+        src="/icons/up-right-svgrepo-com-white.svg"
+        alt=""
+        width={20}
+        height={20}
+        className="object-contain"
+      />
+    </Link>
+  );
+}

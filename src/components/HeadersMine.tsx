@@ -94,11 +94,19 @@ export function Header({ typeMenu }: HeaderProps) {
         alt="Logo"
         width={128}
         height={128}
-        className={` ${ hasScrolled ? "w-8 h-8 object-contain lg:w-10 lg:h-10" : "w-16 h-16 object-contain lg:w-24 lg:h-24" }`}
+        className={` ${
+          hasScrolled
+            ? "w-8 h-8 object-contain lg:w-10 lg:h-10"
+            : "w-16 h-16 object-contain lg:w-24 lg:h-24"
+        }`}
       />
       <p
         className={`font-bold text-titre-page ${
-          isMenuOpen ? "text-white" : hasScrolled ? "text-vert-fonce" : "text-white"
+          isMenuOpen
+            ? "text-white"
+            : hasScrolled
+            ? "text-vert-fonce"
+            : "text-white"
         }`}
       >
         ONG DFA
@@ -108,37 +116,25 @@ export function Header({ typeMenu }: HeaderProps) {
 
   const renderMenuLg = () => (
     <nav className="hidden lg:flex items-center space-x-6">
-      <MenuItemColor
-        texte="PROJET 1"
-        href="/"
-        src="/logos/ico-no-bg.png"
-        className={` ${
-          hasScrolled
-            ? "text-white bg-vert-fonce "
-            : "text-white bg-vert-clair "
-        }`}
-      />
-      <MenuItemColor
-        texte="PROJET 2"
-        href="/"
-        src="/logos/ico-no-bg.png"
-        className={`${
-          hasScrolled
-            ? "text-white bg-vert-fonce"
-            : "text-white bg-vert-clair "
-        }`}
-      />
-
-      {menuLink.map((link) => (
-        <MenuItemLine
-          key={link.path}
-          href={link.path}
-          className={`font-light hover:underline ${
-            hasScrolled ? "text-vert-fonce" : "text-white"
-          }`}
-          texte={link.label}
-        />
-      ))}
+      {menuLink.map((link, index) =>
+        index === 2 ? (
+          <MenuItemColor key={link.path} href={link.path} texte={link.label} src="/icons/project-configuration-svgrepo-com.svg"
+              className={` ${
+                hasScrolled
+                  ? "text-white bg-vert-fonce "
+                  : "text-white bg-vert-clair "
+              }`}/>
+        ) : (
+          <MenuItemLine
+            key={link.path}
+            href={link.path}
+            className={`font-light hover:underline ${
+              hasScrolled ? "text-vert-fonce" : "text-white"
+            }`}
+            texte={link.label}
+          />
+        )
+      )}
       <SearchBar />
     </nav>
   );
@@ -253,7 +249,11 @@ export function Header({ typeMenu }: HeaderProps) {
         }`}
       >
         <div className="flex justify-center items-center">
-          <div className={`w-full flex justify-center lg:px-8 px-4  z-30 ${hasScrolled ? "py-0" : "py-2"}`}>
+          <div
+            className={`w-full flex justify-center lg:px-8 px-4  z-30 ${
+              hasScrolled ? "py-0" : "py-2"
+            }`}
+          >
             <div className="w-full flex justify-between items-center gap-2">
               {renderLogo()}
               {renderMenuLg()}
