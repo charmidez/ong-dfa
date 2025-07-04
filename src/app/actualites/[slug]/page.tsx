@@ -3,13 +3,13 @@ import { TitrePageActu } from "@/components/Titre";
 import { actualitesData } from "@/data/actualiteData";
 import Image from "next/image";
 import Link from "next/link";
-import NotFound from "@/app/not-found";
+import { notFound } from "next/navigation";
 
-/*
+
 interface ArticlePageProps {
   params: { slug: string };
 }
-  */
+  
 
 export async function generateStaticParams() {
   return actualitesData.map((article) => ({
@@ -18,10 +18,10 @@ export async function generateStaticParams() {
 }
 
 //  ACTUALLITÉS
-const Page = ({ params }: { params: { slug: string } }) => {
+export default function Page({ params }: ArticlePageProps) {
   const article = actualitesData.find((a) => a.slug === params.slug);
 
-  if (!article) return NotFound();
+  if (!article) return notFound();
 
   return (
     <main>
@@ -78,4 +78,4 @@ const Page = ({ params }: { params: { slug: string } }) => {
   );
 };
 
-export default Page;
+//export default Page;
