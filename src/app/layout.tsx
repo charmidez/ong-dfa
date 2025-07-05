@@ -23,6 +23,9 @@ const roboto = Roboto({
 });
 
 export const metadata = {
+  icons: {
+    icon: "/favicon.ico",
+  },
   title: {
     default: "ONG DFA",
     template: "%s | ONG DFA",
