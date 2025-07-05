@@ -73,7 +73,7 @@ export function Form(){
             value={form.name}
             onChange={handleChange}
             required
-            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-violet-500"
+            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
           />
         </div>
 
@@ -88,7 +88,7 @@ export function Form(){
             value={form.email}
             onChange={handleChange}
             required
-            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-violet-500"
+            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
           />
         </div>
 
@@ -103,13 +103,13 @@ export function Form(){
             value={form.message}
             onChange={handleChange}
             required
-            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-violet-500"
+            className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
           />
         </div>
 
         <button
           type="submit"
-          className="bg-violet-600 text-white px-6 py-2 rounded-xl hover:bg-violet-700 transition"
+          className="bg-vert-clair text-white px-6 py-2 rounded-lg hover:bg-vert-fonce transition"
         >
           Envoyer
         </button>

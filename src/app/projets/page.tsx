@@ -2,6 +2,11 @@ import Breadcrumb from "@/components/Breadcumbs";
 import {TitrePage} from "@/components/Titre";
 import { NosDomainesDintervention, Nosprojets, QuelqueRealisations } from "./projectsSections";
 
+export const metadata = {
+  title: "Nos Projets",
+};
+
+
 // PROJECT 
 const Page = () => {
   {
@@ -12,7 +17,7 @@ const Page = () => {
         description="DFA intervient dans cinq domaines clés pour améliorer les conditions de vie des populations vulnérables."
         className="bg-[url('/images/titre-a-projet.webp')] bg-cover bg-center"
       />
-      <div className="px-8 py-4">
+      <div className="px-4 lg:px-8 py-4 bg-gray-100">
         <Breadcrumb />
       </div>
       <div>

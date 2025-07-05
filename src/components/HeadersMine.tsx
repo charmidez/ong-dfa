@@ -5,7 +5,12 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import Image from "next/image";
-import { MenuItemColor, MenuItemLine } from "./Buttons";
+import {
+  MenuItemColor,
+  MenuItemColorMobile,
+  MenuItemLine,
+  MenuItemLineWhite,
+} from "./Buttons";
 import SearchBar from "./SearchBar";
 
 const menuLink = [
@@ -118,12 +123,17 @@ export function Header({ typeMenu }: HeaderProps) {
     <nav className="hidden lg:flex items-center space-x-6">
       {menuLink.map((link, index) =>
         index === 2 ? (
-          <MenuItemColor key={link.path} href={link.path} texte={link.label} src="/icons/project-configuration-svgrepo-com.svg"
-              className={` ${
-                hasScrolled
-                  ? "text-white bg-vert-fonce "
-                  : "text-white bg-vert-clair "
-              }`}/>
+          <MenuItemColor
+            key={link.path}
+            href={link.path}
+            texte={link.label}
+            src="/icons/project-configuration-svgrepo-com.svg"
+            className={` ${
+              hasScrolled
+                ? "text-white bg-vert-fonce "
+                : "text-white bg-vert-clair "
+            }`}
+          />
         ) : (
           <MenuItemLine
             key={link.path}
@@ -177,40 +187,26 @@ export function Header({ typeMenu }: HeaderProps) {
     >
       <div className="flex flex-row justify-start pl-20 w-full pt-14">
         <ul className="menu-links flex flex-col space-y-4 text-start">
-          <li className="mb-4">
-            <MenuItemColor
-              texte="PROJET 1"
-              href="/"
-              src="/logos/ico-no-bg.png"
-              className={` ${
-                hasScrolled
-                  ? "text-white bg-vert-fonce "
-                  : "text-white bg-vert-clair "
-              }`}
-            />
-          </li>
-          <li>
-            <MenuItemColor
-              texte="PROJET 2"
-              href="/"
-              src="/logos/ico-no-bg.png"
-              className={`${
-                hasScrolled
-                  ? "text-white bg-vert-fonce"
-                  : "text-white bg-vert-clair "
-              }`}
-            />
-          </li>
           {menuLink.map((link, idx) => (
             <li key={idx} className="menu-link-item">
               <div className="menu-link-item-holder">
-                <Link
-                  href={link.path}
-                  className="lg:text-4xl text-2xl text-white hover:underline font-extralight"
-                  onClick={isMenuOpen ? closeMenu : openMenu}
-                >
-                  {link.label}
-                </Link>
+                {idx === 2 ? (
+                  <MenuItemColorMobile
+                    key={link.path}
+                    href={link.path}
+                    texte={link.label}
+                    src="/icons/project-configuration-svgrepo-com.svg"
+                    className="bg-vert-clair text-white text-titre-sous-titre font-light"
+                    onClick={closeMenu}
+                  />
+                ) : (
+                  <MenuItemLineWhite
+                    key={link.path}
+                    href={link.path}
+                    texte={link.label}
+                    onClick={closeMenu}
+                  />
+                )}
               </div>
             </li>
           ))}

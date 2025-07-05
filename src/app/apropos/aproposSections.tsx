@@ -15,7 +15,7 @@ export function PresentationGenerale() {
     /* Présentation Générale */
   }
   return (
-    <section className="py-16 px-4 lg:px-8">
+    <section className="lg:py-16 py-8 px-4 lg:px-8">
       <TitreSection titre={presentationGeneralData.titre} />
       {presentationGeneralData.description.map((paragraphe, index) => {
         if (index === 0) {
@@ -45,7 +45,7 @@ export function CarouselAuto() {
     /* Carousel Automatique */
   }
   return (
-    <div className="overflow-hidden w-full bg-white py-8">
+    <div className="overflow-hidden w-full bg-white lg:py-8 py-4">
       <div className="whitespace-nowrap animate-scroll flex gap-4">
         {imagesCaroussel.concat(imagesCaroussel).map((src, index) => (
           <div
@@ -71,7 +71,7 @@ export function MissionVisionValeurs() {
     /* Mission Vision Valeurs */
   }
   return (
-    <section className="py-16 px-4 lg:px-8">
+    <section className="lg:py-16 py-8 px-4 lg:px-8">
       <TitreSection titre={missionVisionValeurData.titre} />
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 lg:gap-8">
         {missionVisionValeurData.description.map((rubrique, index) => {
@@ -98,7 +98,7 @@ export function Partenanriat(){
         /* Partenanriat */
     }
     return(
-        <section className="py-16 px-4 lg:px-8">
+        <section className="lg:py-16 py-8 px-4 lg:px-8">
             <TitreSection titre={partenairesData.titre} />
         </section>
     )

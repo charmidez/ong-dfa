@@ -5,7 +5,7 @@ import { annonceRecrutemntData } from "@/data/recrutementData";
 
 export function RecrutementAnnonces() {
   return (
-    <section className="py-16 px-4 lg:px-8 flex flex-col">
+    <section className="lg:py-16 py-8 px-4 lg:px-8 flex flex-col">
       <TitreSectionRecrutement
         titre="Annonces de recrutement"
       />
@@ -28,7 +28,7 @@ export function RecrutementAnnonces() {
 
 export function AllActualites() {
   return (
-    <section className="flex flex-col py-16 px-4 lg:px-8 bg-green-50">
+    <section className="flex flex-col lg:py-16 py-8 px-4 lg:px-8 bg-green-50">
       <TitreSection titre="Toutes les actualités" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {actualitesData.map((article) => (

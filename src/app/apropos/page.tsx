@@ -8,6 +8,10 @@ import {
 } from "./aproposSections";
 
 
+export const metadata = {
+  title: "À Propos",
+};
+
 // A PROPOS
 const Page = () => {
   return (
@@ -18,7 +22,7 @@ const Page = () => {
         className="bg-[url('/images/titre-a-propos.webp')] bg-cover bg-center"
       />
 
-      <div className="px-8 py-4">
+      <div className="px-4 lg:px-8 py-4 bg-gray-100">
         <Breadcrumb />
       </div>
 
@@ -30,8 +34,8 @@ const Page = () => {
         <CarouselAuto />
       </div>
 
-      <div>
-        <MissionVisionValeurs />
+      <div className="bg-gray-100">
+        <MissionVisionValeurs/>
       </div>
 
       <div>

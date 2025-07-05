@@ -8,6 +8,7 @@ interface ButtonLinkProps {
   href: string;
   src?: string;
   className?: string;
+  onClick?: () => void;
 }
 
 export function ButtonLink({ texte, href, src, className }: ButtonLinkProps) {
@@ -75,11 +76,61 @@ export function MenuItemColor({
   );
 }
 
+export function MenuItemColorMobile({
+  texte,
+  href,
+  src,
+  className,
+  onClick
+}: ButtonLinkProps) {
+  return (
+    <Link
+      href={href}
+      className={`hover:underline inline-flex items-center gap-2 px-4 py-2 rounded-lg font-light whitespace-nowrap transition ${className}`}
+      onClick={onClick}
+    >
+
+      {src && (
+        <Image
+          src={src}
+          alt=""
+          width={24}
+          height={24}
+          className="object-contain"
+        />
+      )}
+      <span>{texte}</span>
+    </Link>
+  );
+}
+
 export function MenuItemLine({ texte, href, src, className }: ButtonLinkProps) {
   return (
     <Link
       href={href}
       className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium whitespace-nowrap transition ${className}`}
+    >
+      {src && (
+        <Image
+          src={src}
+          alt=""
+          width={24}
+          height={24}
+          className="object-contain"
+        />
+      )}
+      <span>{texte}</span>
+    </Link>
+  );
+}
+
+
+export function MenuItemLineWhite({ texte, href, src, className, onClick }: ButtonLinkProps) {
+  return (
+    <Link
+      href={href}
+      className={`inline-flex text-titre-sous-titre text-white items-center gap-2 px-4 py-2 rounded-lg font-light whitespace-nowrap transition ${className}`}
+      onClick={onClick}
     >
       {src && (
         <Image

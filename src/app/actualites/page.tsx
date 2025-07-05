@@ -2,6 +2,10 @@ import Breadcrumb from "@/components/Breadcumbs";
 import { TitrePage } from "@/components/Titre";
 import { AllActualites, RecrutementAnnonces } from "./actualiteSections";
 
+export const metadata = {
+  title: "Nos Actualités",
+};
+
 //  ACTUALLITÉS
 const Page = () => {
   return (
@@ -12,7 +16,7 @@ const Page = () => {
         className="bg-[url('/images/titre-actualite.webp')] bg-cover bg-top"
       />
 
-      <div className="px-8 py-4">
+      <div className="px-4 lg:px-8 py-4 bg-gray-100">
         <Breadcrumb />
       </div>
 

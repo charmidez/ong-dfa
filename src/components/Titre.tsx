@@ -12,7 +12,7 @@ export function TitrePage({ className, titre, description }: TitrePageProps) {
   return (
     <>
       <div
-        className={`flex flex-col items-start justify-center pb-90 pt-30 px-8  ${className}`}
+        className={`flex flex-col items-start justify-center lg:pb-90 lg:pt-30 lg:px-8  pb-40 pt-20 px-4  ${className}`}
       >
         <div className="text-white lg:w-96">
           <h1 className="titrePage font-light text-start">{titre}</h1>

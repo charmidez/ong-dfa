@@ -12,7 +12,7 @@ export function Nosprojets() {
     /* Nosprojets */
   }
   return (
-    <section className="py-16 px-4 lg:px-8">
+    <section className="lg:py-16 py-8 px-4 lg:px-8">
       <TitreSection titre={nosProjetsData.titre} />
       <p className=" text-gray-600 mb-4">{nosProjetsData.description}</p>
 
@@ -34,7 +34,7 @@ export function NosDomainesDintervention() {
     /* NosDomainesDintervention */
   }
   return (
-    <section className="py-16 px-4 lg:px-8 bg-gray-100">
+    <section className="lg:py-16 py-8 px-4 lg:px-8 bg-gray-100">
       <TitreSection titre={nosDomainesDinterventionData.titre} />
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 lg:gap-8">
         {nosDomainesDinterventionData.description.map((rubrique, index) => {
@@ -58,7 +58,7 @@ export function QuelqueRealisations() {
     /* QuelqueRealisations */
   }
   return (
-    <section className="py-16 px-4 lg:px-8">
+    <section className="lg:py-16 py-8 px-4 lg:px-8">
       <TitreSection titre={nosRealisationsData.titre} />
     </section>
   );

@@ -86,3 +86,24 @@ body {
 }
 
 
+
+
+
+
+      <div className="flex flex-row justify-start pl-20 w-full pt-14">
+        <ul className="menu-links flex flex-col space-y-4 text-start">
+          {menuLink.map((link, idx) => ( 
+            <li key={idx} className="menu-link-item">
+              <div className="menu-link-item-holder">
+                <Link
+                  href={link.path}
+                  className="lg:text-4xl text-2xl text-white hover:underline font-extralight"
+                  onClick={isMenuOpen ? closeMenu : openMenu}
+                >
+                  {link.label}
+                </Link>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>

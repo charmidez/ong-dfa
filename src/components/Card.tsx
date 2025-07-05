@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { ButtonLink, ButtonLinkProjet, ButtonLinkRecrutement } from "./Buttons";
 
@@ -16,27 +15,32 @@ export const Cardinfo = ({
   linkInfo,
 }: CardinfoProps) => {
   return (
-    <div className="shadow-sm bg-white flex flex-col rounded-lg overflow-hidden">
-      <figure>
-        <Image
-          src={image}
-          alt={titreCard}
-          className="object-cover h-48 w-full"
-          width={2000}
-          height={2000}
-        />
-      </figure>
+<div className="shadow-sm bg-white flex flex-row lg:flex-col rounded-lg overflow-hidden h-38 lg:h-auto">
+  <figure className="flex-shrink-0 w-1/3 lg:w-full h-full lg:h-48">
+    <Image
+      src={image}
+      alt={titreCard}
+      className="object-cover w-full h-full"
+      width={2000}
+      height={2000}
+    />
+  </figure>
 
-      <div className="flex flex-col flex-grow justify-between p-4 gap-4">
-        <div>
-          <h2 className="text-titre-sous-titre text-rouge font-bold">{titreCard}</h2>
-          <p className="text-legende text-gray-400">{descCard}</p>
-        </div>
-        <div className="w-fit">
-          <ButtonLink texte="Lire" href={linkInfo} />
-        </div>
-      </div>
+  <div className="flex flex-col flex-grow justify-between p-4 gap-2 h-full overflow-hidden">
+    <div className="overflow-hidden">
+      <h2 className="text-titre-sous-titre text-rouge font-bold line-clamp-1">
+        {titreCard}
+      </h2>
+      <p className="text-legende text-gray-400 line-clamp-2">
+        {descCard}
+      </p>
     </div>
+    <div className="w-fit">
+      <ButtonLink texte="Lire" href={linkInfo} />
+    </div>
+  </div>
+</div>
+
   );
 };
 
@@ -164,7 +168,6 @@ export function Contactcard({
   );
 }
 
-
 interface CardRecrutementAnoncesProps {
   titre: string;
   linkToAction: string;
@@ -174,18 +177,22 @@ interface CardRecrutementAnoncesProps {
   imgSrc?: string;
 }
 
-export function CardRecrutementAnonces({ titre, linkToAction, textButton, dateLimite }: CardRecrutementAnoncesProps) {
-  return(
+export function CardRecrutementAnonces({
+  titre,
+  linkToAction,
+  textButton,
+  dateLimite,
+}: CardRecrutementAnoncesProps) {
+  return (
     <div className="bg-red-50 border-l-2 border-rouge-milieu p-4 ">
-      <p className="font-semibold text-titre-sous-titre">Offre à soumettre avant le {dateLimite}</p>
+      <p className="font-semibold text-titre-sous-titre">
+        Offre à soumettre avant le {dateLimite}
+      </p>
       <h2>{titre}</h2>
       <ButtonLinkRecrutement href={linkToAction} texte={textButton} />
     </div>
-  )
+  );
 }
-
-
-
 
 import { CalendarDays, Phone } from "lucide-react";
 
@@ -196,19 +203,26 @@ interface JobCardProps {
   dateLimite: string;
 }
 
-export default function JobCard({ titre, description, telephone, dateLimite }: JobCardProps) {
+export default function JobCard({
+  titre,
+  description,
+  telephone,
+  dateLimite,
+}: JobCardProps) {
   return (
     <div className="w-fit mx-auto bg-white shadow-2xl rounded-2xl p-6 md:p-8 border border-gray-200">
       <div className="flex flex-row justify-between">
-        <h2 className="text-titre-section font-bold text-gray-800 mb-4">{titre}</h2>
+        <h2 className="text-titre-section font-bold text-gray-800 mb-4">
+          {titre}
+        </h2>
         <div className="flex flex-row gap-4 items-center">
           <ButtonLink href="/files/job.docx" texte="Télécharger l'annonce" />
-        <ButtonLinkRecrutement href="/recrutements" texte="Postuler" />
-        
+          <ButtonLinkRecrutement href="/recrutements" texte="Postuler" />
         </div>
-
       </div>
-      <p className="text-gray-600 text-sm md:text-base mb-6 leading-relaxed mt-4">{description}</p>
+      <p className="text-gray-600 text-sm md:text-base mb-6 leading-relaxed mt-4">
+        {description}
+      </p>
 
       <div className="flex flex-col md:flex-row justify-between gap-4 mt-4 text-sm md:text-base">
         <div className="flex items-center gap-2 text-gray-700">
@@ -218,17 +232,23 @@ export default function JobCard({ titre, description, telephone, dateLimite }: J
 
         <div className="flex items-center gap-2 text-gray-700">
           <CalendarDays className="w-5 h-5 text-red-600" />
-          <span>Date limite : <strong>{dateLimite}</strong></span>
+          <span>
+            Date limite : <strong>{dateLimite}</strong>
+          </span>
         </div>
       </div>
     </div>
   );
 }
 
-
-
-export function CardProjetsSecond({ titre, linkToAction, textButton, description, imgSrc }: CardRecrutementAnoncesProps) {
-  return(
+export function CardProjetsSecond({
+  titre,
+  linkToAction,
+  textButton,
+  description,
+  imgSrc,
+}: CardRecrutementAnoncesProps) {
+  return (
     <div className="bg-vert-clair border-l-6 border-vert-fonce p-4 space-y-4">
       <div className="flex flex-row items-center">
         <Image
@@ -243,5 +263,5 @@ export function CardProjetsSecond({ titre, linkToAction, textButton, description
       <p className="text-texte-normal">{description}</p>
       <ButtonLinkProjet href={linkToAction} texte={textButton} />
     </div>
-  )
+  );
 }
