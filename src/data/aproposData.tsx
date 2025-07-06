@@ -55,8 +55,8 @@ export const missionVisionValeurData = {
     },
         {
         titre : "Valeurs",
-        desc : `Engagement - Nous nous consacrons entièrement à notre mission et à nos bénéficiaires, en travaillant sans relâche pour atteindre nos objectifs.
-        Innovation - Nous cherchons constamment des solutions nouvelles et efficaces pour relever les défis locaux et améliorer les conditions de vie.
+        desc : `Nous nous consacrons entièrement à notre mission et à nos bénéficiaires, en travaillant sans relâche pour atteindre nos objectifs. 
+        Nous cherchons constamment des solutions nouvelles et efficaces pour relever les défis locaux et améliorer les conditions de vie.
         Collaboration`,
         bgColor : "bg-blue-900",
         icon : "/icons/valeur.png",

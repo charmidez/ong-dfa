@@ -1,7 +1,9 @@
 //import Link from "next/link";
 import Image from "next/image";
-import { ButtonLink, MenuItem } from "./Buttons";
+
 import { nomDuSite, nomDuSiteDefini } from "@/data/globalData";
+import { ButtonLinkWhatsApp, MenuItem } from "./Buttons";
+
 
 const Footer = () => {
   return (
@@ -13,7 +15,7 @@ const Footer = () => {
             <Image
               src="/logos/ico-no-bg.png"
               alt="logo"
-              className="p-0 w-60"
+              className="p-0 w-40"
               width={500}
               height={500}
             />
@@ -76,24 +78,27 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row gap-8 lg:gap-20">
             <ul className="font-semibold space-y-1">
               <li>
-                <ButtonLink
+                <ButtonLinkWhatsApp
                   texte={"Don"}
-                  href={"/don"}
                   src="/icons/gift-svgrepo-com.svg"
+                  message={"Bonjour, je souhaite faire un don pour aider soutenir les oeuvres de DFA."}
+                  phoneNumber={"22891270369"}
                 />
               </li>
               <li>
-                <ButtonLink
+                <ButtonLinkWhatsApp
                   texte={"Apport"}
-                  href={"/apport"}
                   src="/icons/hand-heart-svgrepo-com.svg"
+                  message={"Bonjour, je souhaite faire un apport, soit en nature ou en service pour soutenir les oeuvres de DFA ONG."}
+                  phoneNumber={"22891270369"}
                 />
               </li>
               <li>
-                <ButtonLink
+                <ButtonLinkWhatsApp
                   texte={"Partenariats"}
-                  href={"/partenaire"}
                   src="/icons/agreement-deal-friends-svgrepo-com.svg"
+                  message={"Bonjour, je souhaite faire un partenariat avec DFA."}
+                  phoneNumber={"22891270369"}
                 />
               </li>
             </ul>
@@ -192,7 +197,8 @@ const Footer = () => {
 
       <div className="bg-gray-800 py-4 flex justify-center">
         <p className="text-mine-footer lg:text-sm text-gray-400 font-semibold text-center px-4">
-          © 2025 DFA ONG - Design & Developed By <a href="https://www.charmidez.com">{" "}Charmidez</a>
+          © 2025 DFA ONG - Design & Developed By{" "}
+          <a href="https://www.charmidez.com"> Charmidez</a>
         </p>
       </div>
     </>

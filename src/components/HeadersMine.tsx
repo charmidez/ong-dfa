@@ -144,8 +144,8 @@ export function Header({ typeMenu }: HeaderProps) {
             className={`font-light hover:underline ${
               pathname === link.path || pathname.startsWith(link.path + "/")
                 ? hasScrolled
-                  ? "underline underline-offset-4 font-extrabold text-vert-fonce"
-                  : "underline underline-offset-4 font-extrabold text-white"
+                  ? "underline underline-offset-4 font-semibold text-vert-fonce"
+                  : "underline underline-offset-4 font-semibold text-white"
                 : hasScrolled
                 ? "text-vert-fonce"
                 : "text-white"
@@ -208,12 +208,11 @@ export function Header({ typeMenu }: HeaderProps) {
                     className={`bg-vert-clair text-white text-titre-sous-titre font-light
                       ${
                         pathname === link.path ||
-                      pathname.startsWith(link.path + "/")
-                        ? "underline underline-offset-4 text-white font-semibold"
-                        : "text-white"
-                    }`}
+                        pathname.startsWith(link.path + "/")
+                          ? "underline underline-offset-4 text-white font-semibold"
+                          : "text-white"
+                      }`}
                     onClick={closeMenu}
-                    
                   />
                 ) : (
                   <MenuItemLineWhite

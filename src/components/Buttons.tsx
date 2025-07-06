@@ -11,6 +11,16 @@ interface ButtonLinkProps {
   onClick?: () => void;
 }
 
+interface WhatsAppButtonProps {
+  phoneNumber: string; // exemple : "+22890909090"
+  message: string;
+  buttonText?: string;
+  texte: string;
+  src?: string;
+  className?: string;
+  onClick?: () => void;
+}
+
 export function ButtonLink({ texte, href, src, className }: ButtonLinkProps) {
   return (
     <Link
@@ -81,7 +91,7 @@ export function MenuItemColorMobile({
   href,
   src,
   className,
-  onClick
+  onClick,
 }: ButtonLinkProps) {
   return (
     <Link
@@ -89,7 +99,6 @@ export function MenuItemColorMobile({
       className={`hover:underline inline-flex items-center gap-2 px-4 py-2 rounded-lg font-light whitespace-nowrap transition ${className}`}
       onClick={onClick}
     >
-
       {src && (
         <Image
           src={src}
@@ -124,8 +133,13 @@ export function MenuItemLine({ texte, href, src, className }: ButtonLinkProps) {
   );
 }
 
-
-export function MenuItemLineWhite({ texte, href, src, className, onClick }: ButtonLinkProps) {
+export function MenuItemLineWhite({
+  texte,
+  href,
+  src,
+  className,
+  onClick,
+}: ButtonLinkProps) {
   return (
     <Link
       href={href}
@@ -168,14 +182,7 @@ export function ButtonLinkRecrutement({
   );
 }
 
-
-
-
-export function ButtonLinkProjet({
-  texte,
-  href,
-  className,
-}: ButtonLinkProps) {
+export function ButtonLinkProjet({ texte, href, className }: ButtonLinkProps) {
   return (
     <Link
       href={href}
@@ -190,5 +197,42 @@ export function ButtonLinkProjet({
         className="object-contain"
       />
     </Link>
+  );
+}
+
+export function ButtonLinkWhatsApp({
+  texte,
+  src,
+  message,
+  phoneNumber,
+  className,
+}: WhatsAppButtonProps) {
+  const handleClick = () => {
+    const url = `https://wa.me/${phoneNumber.replace(
+      /\D/g,
+      ""
+    )}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  };
+
+  {/*
+    */}
+
+  return (
+    <button
+      className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-vert-clair text-white font-medium hover:bg-vert-fonce w-full transition ${className}`}
+      onClick={handleClick}
+    >
+      {src && (
+        <Image
+          src={src}
+          alt=""
+          width={30}
+          height={30}
+          className="object-contain"
+        />
+      )}
+      <span>{texte}</span>
+    </button>
   );
 }
