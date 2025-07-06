@@ -6,6 +6,7 @@ type TitrePageProps = {
   titre: string;
   description: string;
   imgUrl?: string; // Optional image URL for TitrePageActu
+  dateEnLettres?: string; // Optional date in letters for TitrePageActu
 };
 
 export function TitrePage({ className, titre, description }: TitrePageProps) {
@@ -45,6 +46,7 @@ export function TitrePageActu({
   className,
   titre,
   description,
+  dateEnLettres,
 }: TitrePageProps) {
   return (
     <>
@@ -55,6 +57,9 @@ export function TitrePageActu({
           <h1 className="text-titre-section font-light text-start">{titre}</h1>
           <p className="text-texte-legende font-light text-start mt-2">
             {description}
+          </p>
+          <p className="text-texte-legende font-light text-start mt-2">
+            {dateEnLettres}
           </p>
         </div>
       </div>

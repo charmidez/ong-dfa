@@ -37,15 +37,19 @@ export function Actualites() {
       <TitreSection titre="Actualités" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Données et liste à récupérer depuis la base de données avec le composant carte*/}
-        {actualitesData.slice(-4).map((article, index) => (
-          <Cardinfo
-            key={index}
-            titreCard={article.titre}
-            descCard={article.resume}
-            image={article.image}
-            linkInfo={`/actualites/${article.slug}`}
-          />
-        ))}
+        {[...actualitesData]
+          .sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          ) 
+          .map((article) => (
+            <Cardinfo
+              key={article.slug}
+              titreCard={article.titre}
+              descCard={article.resume}
+              image={article.image}
+              linkInfo={`/actualites/${article.slug}`}
+            />
+          ))}
       </div>
     </div>
   );

@@ -6,9 +6,7 @@ import { annonceRecrutemntData } from "@/data/recrutementData";
 export function RecrutementAnnonces() {
   return (
     <section className="lg:py-16 py-8 px-4 lg:px-8 flex flex-col">
-      <TitreSectionRecrutement
-        titre="Annonces de recrutement"
-      />
+      <TitreSectionRecrutement titre="Annonces de recrutement" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {annonceRecrutemntData.map((annonce) => {
           return (
@@ -31,15 +29,19 @@ export function AllActualites() {
     <section className="flex flex-col lg:py-16 py-8 px-4 lg:px-8 bg-green-50">
       <TitreSection titre="Toutes les actualités" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {actualitesData.map((article) => (
-          <Cardinfo
-            key={article.slug}
-            titreCard={article.titre}
-            descCard={article.resume}
-            image={article.image}
-            linkInfo={`/actualites/${article.slug}`}
-          />
-        ))}
+        {[...actualitesData]
+          .sort(
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+          ) 
+          .map((article) => (
+            <Cardinfo
+              key={article.slug}
+              titreCard={article.titre}
+              descCard={article.resume}
+              image={article.image}
+              linkInfo={`/actualites/${article.slug}`}
+            />
+          ))}
       </div>
     </section>
   );

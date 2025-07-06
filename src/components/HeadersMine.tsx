@@ -12,6 +12,7 @@ import {
   MenuItemLineWhite,
 } from "./Buttons";
 import SearchBar from "./SearchBar";
+import { usePathname } from "next/navigation";
 
 const menuLink = [
   { path: "/", label: "BIENVENUE" },
@@ -92,6 +93,8 @@ export function Header({ typeMenu }: HeaderProps) {
 
   useGSAP(() => setupGSAP(), { scope: container });
 
+  const pathname = usePathname();
+
   const renderLogo = () => (
     <Link href="/" className="flex items-center gap-4">
       <Image
@@ -139,7 +142,13 @@ export function Header({ typeMenu }: HeaderProps) {
             key={link.path}
             href={link.path}
             className={`font-light hover:underline ${
-              hasScrolled ? "text-vert-fonce" : "text-white"
+              pathname === link.path || pathname.startsWith(link.path + "/")
+                ? hasScrolled
+                  ? "underline underline-offset-4 font-extrabold text-vert-fonce"
+                  : "underline underline-offset-4 font-extrabold text-white"
+                : hasScrolled
+                ? "text-vert-fonce"
+                : "text-white"
             }`}
             texte={link.label}
           />
@@ -196,8 +205,15 @@ export function Header({ typeMenu }: HeaderProps) {
                     href={link.path}
                     texte={link.label}
                     src="/icons/project-configuration-svgrepo-com.svg"
-                    className="bg-vert-clair text-white text-titre-sous-titre font-light"
+                    className={`bg-vert-clair text-white text-titre-sous-titre font-light
+                      ${
+                        pathname === link.path ||
+                      pathname.startsWith(link.path + "/")
+                        ? "underline underline-offset-4 text-white font-semibold"
+                        : "text-white"
+                    }`}
                     onClick={closeMenu}
+                    
                   />
                 ) : (
                   <MenuItemLineWhite
@@ -205,6 +221,12 @@ export function Header({ typeMenu }: HeaderProps) {
                     href={link.path}
                     texte={link.label}
                     onClick={closeMenu}
+                    className={`${
+                      pathname === link.path ||
+                      pathname.startsWith(link.path + "/")
+                        ? "underline underline-offset-4 text-white font-semibold"
+                        : "text-white"
+                    }`}
                   />
                 )}
               </div>
