@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ong-dfa.com
+
+# Sitemaps
+Sitemap: https://ong-dfa.com/sitemap.xml
