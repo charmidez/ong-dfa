@@ -83,17 +83,17 @@ export function SituationONGTogo2025() {
 
 export function AppelCandidatureFilles2025() {
   return (
-    <article className="prose lg:prose-xl mx-auto px-4 text-justify">
+    <article className="prose lg:prose-xl mx-auto px-4 text-justify bg-gray-200 rounded-lg">
       <h1 className="text-center font-bold text-titre-section text-rose-600">
         Appel à candidatures – Filles aux commandes 2025
       </h1>
 
       <Image
-        src="/images/filles-aux-commandes.webp" // à remplacer avec ton image réelle
+        src="/images/jeune-fille1.webp" // à remplacer avec ton image réelle
         alt="Jeunes filles leaders"
         width={1200}
         height={600}
-        className="rounded-lg my-6 object-cover w-full"
+        className="rounded-lg m-2 object-cover w-full"
       />
 
       <p>
@@ -144,7 +144,7 @@ export function AppelCandidatureFilles2025() {
       </p>
 
       <Image
-        src="/images/filles-leadership.webp" // facultative deuxième image
+        src="/images/jeune-fille2.webp" // facultative deuxième image
         alt="Filles engagées pour l’égalité"
         width={1200}
         height={500}

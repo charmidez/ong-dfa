@@ -210,12 +210,12 @@ export default function JobCard({
   dateLimite,
 }: JobCardProps) {
   return (
-    <div className="w-fit mx-auto bg-white shadow-2xl rounded-2xl p-6 md:p-8 border border-gray-200">
-      <div className="flex flex-row justify-between">
-        <h2 className="text-titre-section font-bold text-gray-800 mb-4">
+    <div className="w-fit mx-auto bg-white shadow rounded-lg p-4 lg:p-8">
+      <div className="flex lg:flex-row flex-col justify-between">
+        <h2 className="text-titre-section font-bold text-gray-800 mb-4 lg:mb-0">
           {titre}
         </h2>
-        <div className="flex flex-row gap-4 items-center">
+        <div className="flex flex-row gap-4">
           <ButtonLink href="/files/job.docx" texte="Télécharger l'annonce" />
           <ButtonLinkRecrutement href="/recrutements" texte="Postuler" />
         </div>

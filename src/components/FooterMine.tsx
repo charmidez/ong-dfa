@@ -114,7 +114,7 @@ const Footer = () => {
               <li>
                 <MenuItem
                   texte={`Nos domaines d'activité`}
-                  href={"/nos-domaines-dactivite"}
+                  href={"/apropos"}
                   src="/icons/up-right-svgrepo-com.svg"
                 />
               </li>

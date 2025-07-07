@@ -68,11 +68,11 @@ export default async function Page({ params }: ArticlePageProps) {
         className="bg-[url('/images/titre-actualite.webp')] bg-cover bg-top"
       />
 
-      <div className="px-4 lg:px-8 py-4 bg-gray-100">
+      <div className="px-4 lg:px-8 py-4 bg-gray-300">
         <Breadcrumb />
       </div>
 
-      <section className="flex flex-col gap-4 items-start justify-center  py-16 px-4 lg:px-8 bg-gray-100">
+      <section className="flex flex-col gap-4 items-start justify-center  lg:py-8 py-4 px-4 lg:px-8">
         <div className="flex flex-row justify-start items-center lg:gap-4">
           <Link href="/">
             <Image
