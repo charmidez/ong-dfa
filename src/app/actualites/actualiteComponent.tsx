@@ -162,6 +162,49 @@ export function AppelCandidatureFilles2025() {
   );
 }
 
+export default function ActualiteDclicOIF() {
+  return (
+    <article className="prose lg:prose-xl mx-auto px-4 text-justify">
+      <h1 className="text-center text-titre-section font-bold text-bleu-oif">
+        Appel à candidatures – Programme D-CLIC de l’OIF
+      </h1>
+
+      <p>
+        Le projet <strong>« D-CLIC, formez-vous au numérique avec l’OIF »</strong> lance un appel à candidatures
+        pour permettre aux jeunes francophones de suivre trois formations entièrement à distance :
+      </p>
+
+      <ul className="list-disc list-inside">
+        <li>Parcours développement web</li>
+        <li>Parcours développement mobile</li>
+        <li>Parcours marketing numérique</li>
+      </ul>
+
+      <p>
+        Ces formations tutorées, d’une durée de <strong>deux mois</strong>, débuteront le <strong>21 juillet 2025</strong> et
+        visent à favoriser l’employabilité et l’autonomisation des jeunes dans des secteurs porteurs du numérique.
+      </p>
+
+      <p>
+        <strong>Pour postuler :</strong><br />
+        <a
+          href="https://lnkd.in/dYsuB4Kr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 underline"
+        >
+          Cliquez ici pour accéder au formulaire
+        </a>
+      </p>
+
+      <p className="mt-6 text-end font-light italic">
+        CUBE SAEI – Organisation internationale de la Francophonie (OIF)
+      </p>
+    </article>
+  );
+}
+
+
 
 
 

@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { ButtonLink, ButtonLinkProjet, ButtonLinkRecrutement } from "./Buttons";
+import { ButtonLink, ButtonLinkProjet, ButtonLinkRecrutement, MenuItemPartenaires } from "./Buttons";
 
 type CardinfoProps = {
+  className?: string;
   titreCard: string;
   descCard: string;
   image: string;
@@ -264,4 +265,28 @@ export function CardProjetsSecond({
       <ButtonLinkProjet href={linkToAction} texte={textButton} />
     </div>
   );
+}
+
+
+export function CardPartenaire({
+  className,
+  titreCard,
+  descCard,
+  image,
+  linkInfo,
+}: CardinfoProps){
+  return (
+    <div className={`${className} flex flex-col gap-2 lg:gap-4 p-2 lg:p-4 shadow`}>
+      <Image
+        src={image}
+        alt={titreCard}
+        className="object-contain w-full rounded-lg"
+        width={100}
+        height={100}
+      />
+      <h2 className="font-semibold text-titre-sous-titre">{titreCard}</h2>
+      <p className="text-texte-normal text-gray-600">{descCard}</p>
+      <MenuItemPartenaires href={linkInfo} texte="En savoir plus" src="/icons/up-right-svgrepo-com.svg"/>
+    </div>
+  )
 }

@@ -6,9 +6,9 @@ import {
   presentationGeneralData,
   imagesCaroussel,
   missionVisionValeurData,
-  partenairesData
+  partenairesData,
 } from "@/data/aproposData";
-import { CardMissionVisionValeur } from "@/components/Card";
+import { CardMissionVisionValeur, CardPartenaire } from "@/components/Card";
 
 export function PresentationGenerale() {
   {
@@ -86,20 +86,35 @@ export function MissionVisionValeurs() {
           );
         })}
       </div>
-      <h3 className="border-l-4 lg:p-8 p-4 mt-4 text-titre-sous-titre font-semibold bg-gray-50 border-rouge">{missionVisionValeurData.description2}</h3>
+      <h3 className="border-l-4 lg:p-8 p-4 mt-4 text-titre-sous-titre font-semibold bg-gray-50 border-rouge">
+        {missionVisionValeurData.description2}
+      </h3>
     </section>
   );
 }
 
-
-
-export function Partenanriat(){
-    {
-        /* Partenanriat */
-    }
-    return(
-        <section className="lg:py-16 py-8 px-4 lg:px-8">
-            <TitreSection titre={partenairesData.titre} />
-        </section>
-    )
+export function Partenanriat() {
+  {
+    /* Partenanriat */
+  }
+  return (
+    <section className="lg:py-16 py-8 px-4 lg:px-8">
+      <TitreSection titre={partenairesData.titre} />
+      <div className="grid lg:grid-cols-4 grid-cols-1 gap-4 lg:gap-8">
+        {partenairesData.description.map((paragraphe, index) => {
+          return (
+            <div key={index}>
+              <CardPartenaire
+                titreCard={paragraphe.name}
+                image={paragraphe.logo}
+                linkInfo={paragraphe.link}
+                descCard={paragraphe.desc}
+                className={paragraphe.className}
+              />
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
 }

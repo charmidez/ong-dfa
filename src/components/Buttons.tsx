@@ -236,3 +236,24 @@ export function ButtonLinkWhatsApp({
     </button>
   );
 }
+
+
+export function MenuItemPartenaires({ texte, href, src }: ButtonLinkProps) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex items-center gap-2 font-semibold text-rouge-milieu hover:underline underline-offset-4 transition-all"
+    >
+      <span>{texte}</span>
+      {src && (
+        <Image
+          src={src}
+          alt=""
+          width={20}
+          height={20}
+          className="object-contain"
+        />
+      )}
+    </Link>
+  );
+}

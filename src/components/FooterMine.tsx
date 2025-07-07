@@ -4,7 +4,6 @@ import Image from "next/image";
 import { nomDuSite, nomDuSiteDefini } from "@/data/globalData";
 import { ButtonLinkWhatsApp, MenuItem } from "./Buttons";
 
-
 const Footer = () => {
   return (
     <>
@@ -27,48 +26,48 @@ const Footer = () => {
 
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-row gap-4">
-              <Image
-                src="/icons/icons8-linkedin.svg"
-                alt="facebook"
-                className="w-8"
-                width={100}
-                height={100}
-              />
-              <Image
-                src="/icons/facebook-svgrepo-com.svg"
-                alt="facebook"
-                className="w-8"
-                width={100}
-                height={100}
-              />
-              <Image
-                src="/icons/instagram-svgrepo-com.svg"
-                alt="instagram"
-                className="w-8"
-                width={100}
-                height={100}
-              />
-              <Image
-                src="/icons/youtube-svgrepo-com.svg"
-                alt="youtube"
-                className="w-8"
-                width={100}
-                height={100}
-              />
-              <Image
-                src="/icons/tiktok-svgrepo-com.svg"
-                alt="tiktok"
-                className="w-8"
-                width={100}
-                height={100}
-              />
-              <Image
-                src="/icons/icons8-x.svg"
-                alt="x"
-                className="w-8"
-                width={100}
-                height={100}
-              />
+              <a
+                href="https://www.linkedin.com/company/ong-dfa7/posts/?feedView=all"
+                target="_blank"
+              >
+                <Image
+                  src="/icons/icons8-linkedin.svg"
+                  alt="linkedin"
+                  className="w-8"
+                  width={100}
+                  height={100}
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61576239890092"
+                target="_blank"
+              >
+                <Image
+                  src="/icons/facebook-svgrepo-com.svg"
+                  alt="facebook"
+                  className="w-8"
+                  width={100}
+                  height={100}
+                />
+              </a>
+              <a href="https://www.instagram.com/ong_dfa/" target="_blank">
+                <Image
+                  src="/icons/instagram-svgrepo-com.svg"
+                  alt="instagram"
+                  className="w-8"
+                  width={100}
+                  height={100}
+                />
+              </a>
+              <a href="https://www.tiktok.com/@ong_dfa" target="_blank">
+                <Image
+                  src="/icons/tiktok-svgrepo-com.svg"
+                  alt="tiktok"
+                  className="w-8"
+                  width={100}
+                  height={100}
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -81,7 +80,9 @@ const Footer = () => {
                 <ButtonLinkWhatsApp
                   texte={"Don"}
                   src="/icons/gift-svgrepo-com.svg"
-                  message={"Bonjour, je souhaite faire un don pour aider soutenir les oeuvres de DFA."}
+                  message={
+                    "Bonjour, je souhaite faire un don pour aider soutenir les oeuvres de DFA."
+                  }
                   phoneNumber={"22891270369"}
                 />
               </li>
@@ -89,7 +90,9 @@ const Footer = () => {
                 <ButtonLinkWhatsApp
                   texte={"Apport"}
                   src="/icons/hand-heart-svgrepo-com.svg"
-                  message={"Bonjour, je souhaite faire un apport, soit en nature ou en service pour soutenir les oeuvres de DFA ONG."}
+                  message={
+                    "Bonjour, je souhaite faire un apport, soit en nature ou en service pour soutenir les oeuvres de DFA ONG."
+                  }
                   phoneNumber={"22891270369"}
                 />
               </li>
@@ -97,7 +100,9 @@ const Footer = () => {
                 <ButtonLinkWhatsApp
                   texte={"Partenariats"}
                   src="/icons/agreement-deal-friends-svgrepo-com.svg"
-                  message={"Bonjour, je souhaite faire un partenariat avec DFA."}
+                  message={
+                    "Bonjour, je souhaite faire un partenariat avec DFA."
+                  }
                   phoneNumber={"22891270369"}
                 />
               </li>
