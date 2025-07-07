@@ -77,7 +77,7 @@ export const partenairesData = {
     {
       name: "U.E",
       logo: "/logos/lgo-union-europpen.png",
-      link: "https://www.ilo.org/",
+      link: "https://european-union.europa.eu/index_fr",
       className : "bg-orange-100",
       desc: `U.E. est une organisation internationale qui œuvre pour la promotion des droits des travailleurs et l'amélioration des conditions de travail à travers le monde.`,
     },
