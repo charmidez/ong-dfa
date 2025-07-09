@@ -242,7 +242,7 @@ export function MenuItemPartenaires({ texte, href, src }: ButtonLinkProps) {
   return (
     <Link
       href={href}
-      className="inline-flex items-center gap-2 font-semibold text-rouge-milieu hover:underline underline-offset-4 transition-all"
+      className="inline-flex items-center gap-2 font-semibold text-rouge-milieu hover:underline hover:gap-4 underline-offset-4 transition-all"
     >
       <span>{texte}</span>
       {src && (

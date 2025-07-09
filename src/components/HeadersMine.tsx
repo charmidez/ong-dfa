@@ -262,7 +262,7 @@ export function Header({ typeMenu }: HeaderProps) {
       <header
         ref={container}
         className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-          hasScrolled ? "bg-white-transparent shadow-md" : "bg-transparent"
+          hasScrolled ? "bg-white-transparent shadow-md" : "bg-gradient-to-b from-green-dark-transparent to-transparent backdrop-blur-xs"
         }`}
       >
         <div className="flex justify-center items-center">

@@ -1,30 +1,56 @@
+"use client";
+
 import { ButtonLink } from "@/components/Buttons";
 import { CardDomaine, Cardinfo } from "@/components/Card";
 import { TitreSection } from "@/components/Titre";
 import { domaines, motDeBienvenue, sliderData } from "@/data/acceuilData";
 import { actualitesData } from "@/data/actualiteData";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export function Slider() {
   {
     /* SLide En debut */
   }
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === sliderData.length - 1 ? 0 : prev + 1
+      );
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const slide = sliderData[currentIndex];
+
   return (
-    <div className="lg:bg-[url('/images/slide-1.webp')] bg-[url('/images/slide-1-1.webp')] bg-cover bg-top justify-center pt-20 lg:pt-30 lg:px-8 px-4">
-      <div className="flex flex-col items-start justify-center lg:pb-90 pb-44 pt-10">
-        <div className="text-white lg:w-96">
-          <h1 className="text-titre-page font-bold text-start">
-            {sliderData.titre}
-          </h1>
-          <p className="text-texte-normal font-light text-start mt-2">
-            {sliderData.description}
-          </p>
-          <div className="w-fit mt-4">
-            <ButtonLink texte="En savoir plus" href="/apropos" />
+    <>
+
+      <div
+        className="bg-cover bg-center justify-center pt-20 lg:pt-30 lg:px-8 px-4 transition-all duration-700 ease-in-out"
+        style={{
+          backgroundImage: `url('${slide.imgSrc}')`,
+        }}
+      >
+        <div className="flex flex-col items-start justify-center lg:pb-90 pb-44 pt-10">
+          <div className="text-white lg:w-96 bg-green-transparent-light lg:p-4 p-2 rounded-lg backdrop-blur-xs">
+            <h1 className="text-titre-page font-bold text-start">
+              {slide.titre}
+            </h1>
+            <p className="text-texte-normal font-light text-start mt-2">
+              {slide.description}
+            </p>
+            <div className="w-fit mt-4">
+              <ButtonLink texte={slide.textButton} href={slide.linkToAction} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -40,7 +66,7 @@ export function Actualites() {
         {[...actualitesData]
           .sort(
             (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-          ) 
+          )
           .map((article) => (
             <Cardinfo
               key={article.slug}
@@ -79,7 +105,9 @@ export function MotDuPresident() {
             <strong>{motDeBienvenue.titreText}</strong>
           </p>
           {motDeBienvenue.description.map((paragraph, index) => (
-            <p key={index} className="text-justify">{paragraph}</p>
+            <p key={index} className="text-justify">
+              {paragraph}
+            </p>
           ))}
         </div>
       </div>
@@ -87,11 +115,11 @@ export function MotDuPresident() {
   );
 }
 
-export function DomainesIntervention(){
+export function DomainesIntervention() {
   {
     /* Domaines d'intervention */
   }
-  return(
+  return (
     <section className="py-16 px-4 lg:px-8">
       <TitreSection titre="Nos Domaines d'intervention" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
@@ -105,5 +133,5 @@ export function DomainesIntervention(){
         ))}
       </div>
     </section>
-  )
+  );
 }
