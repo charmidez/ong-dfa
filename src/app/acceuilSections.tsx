@@ -57,7 +57,7 @@ export function Slider() {
   };
 
   return (
-    <div className="relative w-full h-[600px] lg:h-[800px] md:h-[600px] overflow-hidden">
+    <div className="relative w-full h-[600px] lg:h-[800px] md:h-[600px] overflow-hidden ">
       {/* Slides avec AnimatePresence - mode sync pour chevauchement */}
       <AnimatePresence initial={false} custom={direction} mode="sync">
         <motion.div

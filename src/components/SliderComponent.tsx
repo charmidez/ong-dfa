@@ -12,7 +12,7 @@ export function SliderHomeComponent( { imgSrc, titre, description, linkToAction,
     return (
         <>
               <div
-                className="bg-cover bg-center justify-center pt-20 lg:pt-30 lg:px-8 px-4 transition-all duration-700 ease-in-out"
+                className=" bg-cover bg-center justify-center pt-20 lg:pt-30 lg:px-8 px-4 transition-all duration-700 ease-in-out"
                 style={{
                   backgroundImage: `url('${imgSrc}')`,
                 }}
