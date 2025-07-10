@@ -1,7 +1,9 @@
 
 "use client";
 
+
 import Image from "next/image";
+import Link from "next/link";
 
 export function SituationONGTogo2025() {
   return (
@@ -79,7 +81,6 @@ export function SituationONGTogo2025() {
     </article>
   );
 }
-
 
 export function AppelCandidatureFilles2025() {
   return (
@@ -203,6 +204,61 @@ export default function ActualiteDclicOIF() {
     </article>
   );
 }
+
+export function RencontreHorizonIA() {
+  return (
+    <article className="flex flex-col gap-6 px-4 py-12 lg:px-8 bg-white text-gray-800">
+      <h1 className="text-titre-page text-vert-fonce font-bold">
+        Comprendre l’intelligence artificielle avec UNICEF Togo
+      </h1>
+
+      <p className="text-texte-normal font-light">
+        Tu entends parler d’intelligence artificielle partout mais tu ne sais pas vraiment ce que c’est ?
+      </p>
+
+      <div className="bg-vert-clair p-4 rounded-lg text-white">
+        <p className="font-semibold text-texte-normal">
+          Bonne nouvelle ! 🎉
+        </p>
+        <p>
+          <strong>#UNICEFTogo</strong> t’invite à une formation 100% gratuite pour tout comprendre sur l’<strong>#IA</strong> : ses bases, ses usages, ses limites et comment elle peut changer ta vie.
+        </p>
+      </div>
+
+      <section>
+        <h2 className="text-titre-section text-vert-milieu font-semibold">
+          🎓 Ce que tu vas apprendre :
+        </h2>
+        <ul className="list-disc list-inside space-y-2 text-texte-normal">
+          <li>✅ Ce qu’est (et n’est pas) l’IA</li>
+          <li>✅ Comment elle impacte ton quotidien</li>
+          <li>✅ L’utiliser de façon responsable et éthique</li>
+        </ul>
+      </section>
+
+      <div className="bg-orange-clair p-4 rounded-lg text-white">
+        <p className="text-texte-normal font-medium">
+          📍Places limitées !
+        </p>
+        <p className="text-texte-normal">
+          Tu as entre 14 et 24 ans ? Inscris-toi à notre 3e session des <strong>#RencontresHorizon</strong> dès maintenant 👇
+        </p>
+        <Link
+          href="https://lnkd.in/dY8CKKMy"
+          target="_blank"
+          className="inline-block mt-4 px-4 py-2 bg-vert-fonce text-white rounded-md hover:bg-vert-milieu transition"
+        >
+          S’inscrire maintenant
+        </Link>
+      </div>
+
+      <p className="text-texte-legende text-gray-500">
+        <strong>#PourChaqueEnfant</strong>, des compétences — <strong>#UNICEFTogo</strong>
+      </p>
+    </article>
+  );
+}
+
 
 
 

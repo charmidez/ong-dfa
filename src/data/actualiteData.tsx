@@ -1,6 +1,7 @@
 import ActualiteDclicOIF, {
   SituationONGTogo2025,
   AppelCandidatureFilles2025,
+  RencontreHorizonIA,
 } from "@/app/actualites/actualiteComponent";
 
 export const actualitesData = [
@@ -33,4 +34,13 @@ export const actualitesData = [
     component: <ActualiteDclicOIF />,
     auteur: "Communication ONG DFA",
   },
+{
+  slug: "formation-intelligence-artificielle-unicef-2025",
+  titre: "Formation gratuite à l’intelligence artificielle avec l’UNICEF Togo",
+  date: "2025-07-10",
+  image: "/images/featured/ia.jpeg",
+  resume: `Comprendre l’IA, ses usages et ses limites – une opportunité unique pour les jeunes de 14 à 24 ans.`,
+  component: <RencontreHorizonIA />,
+  auteur: "Communication ONG DFA",
+}
 ];
