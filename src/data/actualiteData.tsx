@@ -1,10 +1,13 @@
-import ActualiteDclicOIF, {
+import ArticleVIR, {
+  ActualiteDclicOIF,
   SituationONGTogo2025,
   AppelCandidatureFilles2025,
   RencontreHorizonIA,
+  ArticleEFH,
 } from "@/app/actualites/actualiteComponent";
 
 export const actualitesData = [
+  
   {
     slug: "situation-des-ong-au-togo-2025",
     titre: "Quel est l’état actuel des ONG au Togo en 2025 ?",
@@ -25,7 +28,7 @@ export const actualitesData = [
     auteur: "Communication ONG DFA",
   },
 
-    {
+  {
     slug: "appel-candidatures-programme-d-clic-2025",
     titre: "Appel à candidatures – Programme D-CLIC de l’OIF",
     date: "2025-07-07",
@@ -34,13 +37,34 @@ export const actualitesData = [
     component: <ActualiteDclicOIF />,
     auteur: "Communication ONG DFA",
   },
+  {
+    slug: "formation-intelligence-artificielle-unicef-2025",
+    titre:
+      "Formation gratuite à l’intelligence artificielle avec l’UNICEF Togo",
+    date: "2025-07-10",
+    image: "/images/featured/ia.jpeg",
+    resume: `Comprendre l’IA, ses usages et ses limites – une opportunité unique pour les jeunes de 14 à 24 ans.`,
+    component: <RencontreHorizonIA />,
+    auteur: "Communication ONG DFA",
+  },
 {
-  slug: "formation-intelligence-artificielle-unicef-2025",
-  titre: "Formation gratuite à l’intelligence artificielle avec l’UNICEF Togo",
-  date: "2025-07-10",
-  image: "/images/featured/ia.jpeg",
-  resume: `Comprendre l’IA, ses usages et ses limites – une opportunité unique pour les jeunes de 14 à 24 ans.`,
-  component: <RencontreHorizonIA />,
+  slug: "appel-candidatures-efh-education-2025",
+  titre: "Appel à candidatures – Égalité femmes-hommes en éducation",
+  date: "2025-07-14",
+  image: "/images/featured/candidature-2.jpeg", // remplace par l’image que tu veux
+  resume: `Rejoignez la formation du 5 août au 5 septembre 2025 pour devenir un acteur clé de l’égalité femmes-hommes en éducation.`,
+  component: <ArticleEFH />,
   auteur: "Communication ONG DFA",
+},
+{
+  slug: "volontariat-international-reciprocite-vir-2025",
+  titre: "Volontariat International de Réciprocité – Candidature ouverte",
+  date: "2025-07-15",
+  image: "/images/featured/recrutement.jpeg", // change si tu as une autre image
+  resume:
+    "Participez à une mission en France sur le thème de l’horticulture et de la citoyenneté mondiale grâce au programme VIR.",
+  component: <ArticleVIR />,
+  auteur: "Communication ANVT / France Volontaires",
 }
+
 ];

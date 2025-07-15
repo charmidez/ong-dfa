@@ -163,7 +163,7 @@ export function AppelCandidatureFilles2025() {
   );
 }
 
-export default function ActualiteDclicOIF() {
+export  function ActualiteDclicOIF() {
   return (
     <article className="prose lg:prose-xl mx-auto px-4 text-justify">
       <h1 className="text-center text-titre-section font-bold text-bleu-oif">
@@ -258,6 +258,176 @@ export function RencontreHorizonIA() {
     </article>
   );
 }
+
+
+export  function ArticleEFH() {
+  return (
+    <div
+      className="max-w-3xl mx-auto p-6 rounded-2xl shadow-md"
+      style={{
+        backgroundColor: "var(--color-white-transparent)",
+        fontFamily: "var(--font-sans)",
+        color: "var(--color-background)",
+      }}
+    >
+      <h1
+        className="mb-4"
+        style={{
+          fontSize: "var(--text-titre-page)",
+          color: "var(--color-vert-fonce)",
+          fontWeight: "bold",
+        }}
+      >
+        📢 Appel à candidatures
+      </h1>
+
+      <p style={{ fontSize: "var(--text-texte-normal)", marginBottom: "1rem" }}>
+        Vous êtes passionné(e) par l'égalité femmes-hommes (EFH) dans le domaine
+        de l'éducation et souhaitez enrichir vos compétences pratiques dans ce
+        domaine ?
+      </p>
+
+      <p style={{ fontSize: "var(--text-texte-normal)", marginBottom: "1rem" }}>
+        Rejoignez-nous pour la prochaine session de la{" "}
+        <strong>formation sur l'égalité femmes-hommes en éducation</strong>, du{" "}
+        <strong>5 août au 5 septembre 2025</strong>, et devenez un acteur ou une
+        actrice clé du changement !
+      </p>
+
+      <div
+        className="p-4 rounded-lg mb-4"
+        style={{
+          backgroundColor: "var(--color-green-transparent-light)",
+          borderLeft: "4px solid var(--color-vert-milieu)",
+        }}
+      >
+        <p
+          style={{
+            fontSize: "var(--text-texte-normal)",
+            fontWeight: "600",
+            marginBottom: "0.5rem",
+            color: "var(--color-vert-fonce)",
+          }}
+        >
+          Ce programme vous offrira l’opportunité d’:
+        </p>
+        <ul
+          className="list-disc list-inside"
+          style={{ fontSize: "var(--text-texte-normal)", color: "#1a1a1a" }}
+        >
+          <li>
+            ✔️ approfondir votre compréhension des enjeux de l'EFH dans le
+            domaine de l'éducation
+          </li>
+          <li>
+            ✔️ acquérir des outils pratiques pour intégrer l'EFH dans vos projets
+            éducatifs.
+          </li>
+        </ul>
+      </div>
+
+      <p
+        style={{
+          fontSize: "var(--text-texte-normal)",
+          color: "var(--color-rouge-fonce)",
+          fontWeight: "500",
+          marginBottom: "1rem",
+        }}
+      >
+        ⏳ Date limite pour candidater : le 25 juillet 2025 à 18h00 (TU/GMT)
+      </p>
+
+      <a
+        href="https://ow.ly/mesz50Wojh4"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block px-4 py-2 rounded-md"
+        style={{
+          backgroundColor: "var(--color-orange-clair)",
+          color: "#000",
+          fontSize: "var(--text-texte-normal)",
+          fontWeight: "500",
+        }}
+      >
+        👉 En savoir plus
+      </a>
+
+      <div
+        className="mt-6 space-x-2"
+        style={{ fontSize: "var(--text-texte-legende)", color: "#666" }}
+      >
+        <span>#Francophonie</span>
+        <span>#Education</span>
+        <span>#Egalite</span>
+        <span>#RELIEFH</span>
+      </div>
+    </div>
+  );
+}
+
+
+
+export default function ArticleVIR() {
+  return (
+    <div className="max-w-3xl mx-auto p-6 rounded-2xl shadow-md bg-[--color-white-transparent] font-sans text-[--color-background]">
+      <h1 className="mb-4 text-[--text-titre-page] text-[--color-vert-fonce] font-bold">
+        🌍 Volontariat International de Réciprocité – Appel à candidatures
+      </h1>
+
+      <p className="mb-4 text-[--text-texte-normal]">
+        Jeunes togolais, passionnés par les échanges interculturels et
+        l’engagement citoyen, cette opportunité est pour vous ! Grâce au
+        programme de Volontariat International de Réciprocité (VIR), l’ANVT,
+        France Volontaires, Occitanie Coopération et l’APCFAR-TOGO vous ouvrent
+        les portes d’une aventure humaine entre la France et le Togo.
+      </p>
+
+      <div className="p-4 rounded-lg mb-4 bg-[--color-green-transparent-light] border-l-4 border-[--color-vert-milieu]">
+        <p className="mb-1 font-semibold text-[--color-vert-fonce] text-[--text-texte-normal]">
+          Intitulé de la mission :
+        </p>
+        <p className="italic text-[--text-texte-normal]">
+          Horticulture et Éducation à la Citoyenneté mondiale
+        </p>
+      </div>
+
+      <p className="mb-4 text-[--text-texte-normal]">
+        Toute personne intéressée est priée d’envoyer son dossier de
+        candidature en ligne via :{" "}
+        <a
+          href="https://recrutement.togoanvt.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-blue-700"
+        >
+          recrutement.togoanvt.org
+        </a>
+      </p>
+
+      <p className="mb-4 font-medium text-[--color-rouge-fonce] text-[--text-texte-normal]">
+        ⏳ Date limite des candidatures : 20 juillet 2025 à 23h00 GMT
+      </p>
+
+      <a
+        href="https://urlr.me/d3wmcf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block px-4 py-2 rounded-md bg-[--color-orange-clair] text-black font-medium text-[--text-texte-normal] hover:brightness-105 transition"
+      >
+        👉 Plus d’infos ici
+      </a>
+
+      <div className="mt-6 space-x-2 text-[--text-texte-legende] text-gray-600">
+        <span>#𝐕𝐈𝐑</span>
+        <span>#𝐒𝐞𝐫𝐯𝐢𝐜𝐞𝐂𝐢𝐯𝐢𝐪𝐮𝐞</span>
+        <span>#𝐅𝐫𝐚𝐧𝐜𝐞𝐕𝐨𝐥𝐨𝐧𝐭𝐚𝐢𝐫𝐞𝐬</span>
+        <span>#𝐀𝐍𝐕𝐓</span>
+      </div>
+    </div>
+  );
+}
+
+
 
 
 

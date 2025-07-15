@@ -14,6 +14,7 @@ export default function ListeOffres() {
             description={offre.description}
             telephone={offre.telephone}
             dateLimite={offre.dateLimite}
+            fileDownload={offre.filesDownload}
           />
         ))}
       </div>

@@ -22,4 +22,30 @@ Tu es passionné(e) par le développement durable, l’ingénierie civile et le 
     filesDownload: "/files/job.docx",
     telephone: "+228 22 22 22 22",
   },
+
+  {
+  id: 2,
+  titre: "OFFRE D’EMPLOI – Chargé(e) de Projet Infrastructure",
+  description: `Nous recrutons un·e Chargé·e de Projet pour coordonner un ambitieux programme d’aménagement en infrastructures socio-économiques en milieu rural, porté par l’ONG Development For All (DFA) en partenariat avec GGGI.
+
+Vous êtes passionné·e par le développement local durable ? Vous avez une solide expérience dans la gestion de projets d’infrastructures communautaires et un fort engagement pour l’impact social et environnemental ? Cette mission est pour vous !
+
+🎯 Mission : Piloter, coordonner et assurer le suivi des activités de construction, incluant écoles, centres de santé, marchés et systèmes d’assainissement.
+
+📍 Lieu d’affectation : Commune Avé 1, Région Maritime, Togo  
+🕓 Contrat : CDD renouvelable  
+📅 Date limite de candidature : Mercredi 17 juillet 2025  
+📥 Envoyez votre candidature par mail à ongdfa7@gmail.com ou consultez www.ong-dfa.com  
+👉 Mentionner en objet : "Candidature - Chargé(e) de Projet Infrastructure"
+  `,
+  datePublication: "2025-07-14",
+  dateLimite: "17 juillet 2025",
+  linkToAction: "mailto:ongdfa7@gmail.com",
+  textButton: "Postuler maintenant",
+  filesDownload: "/files/tdr.pdf", // si tu n’as pas encore de fichier à joindre
+  telephone: "+228 22 22 22 22",
+}
+
+
+
 ];

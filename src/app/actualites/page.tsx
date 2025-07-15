@@ -20,7 +20,7 @@ const Page = () => {
         <Breadcrumb />
       </div>
 
-      <div>
+      <div id="annonces">
         <RecrutementAnnonces />
       </div>
 

@@ -202,6 +202,7 @@ interface JobCardProps {
   description: string;
   telephone: string;
   dateLimite: string;
+  fileDownload?: string;
 }
 
 export default function JobCard({
@@ -209,6 +210,7 @@ export default function JobCard({
   description,
   telephone,
   dateLimite,
+  fileDownload,
 }: JobCardProps) {
   return (
     <div className="w-fit mx-auto bg-white shadow rounded-lg p-4 lg:p-8">
@@ -217,7 +219,7 @@ export default function JobCard({
           {titre}
         </h2>
         <div className="flex flex-row gap-4">
-          <ButtonLink href="/files/job.docx" texte="Télécharger l'annonce" />
+          <ButtonLink href={`${fileDownload}`} texte="Télécharger l'annonce" />
           <ButtonLinkRecrutement href="/recrutements" texte="Postuler" />
         </div>
       </div>
