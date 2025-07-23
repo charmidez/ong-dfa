@@ -209,7 +209,7 @@ export function MotDuPresident() {
       <div className=" rounded-lg p-6 lg:p-10 flex flex-col lg:flex-row gap-6 lg:gap-12 items-start bg-white">
         <div className="flex-shrink-0">
           <Image
-            src="/images/portrait.webp"
+            src="/images/direction.jpg"
             alt="Le dirigeant de DFA ONG"
             width={300}
             height={400}
@@ -225,7 +225,9 @@ export function MotDuPresident() {
             <p key={index} className="text-justify">
               {paragraph}
             </p>
+            
           ))}
+          <p className="text-right italic font-bold border-r-4 pr-4 border-red-600">La direction génerale</p>
         </div>
       </div>
     </section>
