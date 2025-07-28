@@ -11,7 +11,7 @@ const Page = () => {
   return (
     <main>
       <TitrePage
-        titre="ACTUALLITÉS"
+        titre="ACTUALITÉS"
         description="Toutes les actualités de l'ONG Developpement For All et du monde associatif."
         className="bg-[url('/images/titre-actualite.webp')] bg-cover bg-top"
       />
