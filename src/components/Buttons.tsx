@@ -257,3 +257,39 @@ export function MenuItemPartenaires({ texte, href, src }: ButtonLinkProps) {
     </Link>
   );
 }
+
+
+
+
+
+
+interface EmailProps {
+  email: string;
+  subject: string;
+  body?: string;
+  texte ?: string
+}
+
+
+export const EmailLink = ({ email, subject, body, texte} : EmailProps) => {
+  const encodedSubject = encodeURIComponent(subject);
+  const encodedBody = encodeURIComponent(body ?? '');
+  const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+
+  return (
+    <>
+          <a href={mailtoLink}
+      className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-rouge-clair text-white font-medium hover:bg-rouge-fonce w-fit transition`}
+    >
+      <span>{texte}</span>
+      <Image
+        src="/icons/up-right-svgrepo-com-white.svg"
+        alt=""
+        width={20}
+        height={20}
+        className="object-contain"
+      />
+    </a>
+    </>
+  );
+};

@@ -26,6 +26,23 @@ export function TitrePage({ className, titre, description }: TitrePageProps) {
   );
 }
 
+export function TitrePageRecrutements({ className, titre, description }: TitrePageProps) {
+  return (
+    <>
+      <div
+        className={`flex flex-col items-start justify-center lg:pb-30 lg:pt-30 lg:px-8  pb-20 pt-20 px-4  ${className}`}
+      >
+        <div className="text-white lg:w-96">
+          <h1 className="titrePage font-light text-start">{titre}</h1>
+          <p className="textLegende font-light text-start mt-2">
+            {description}
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
+
 type TitreSectionProps = {
   titre: string;
   className?: string;

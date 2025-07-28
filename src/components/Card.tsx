@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ButtonLink, ButtonLinkProjet, ButtonLinkRecrutement, MenuItemPartenaires } from "./Buttons";
+import { ButtonLink, ButtonLinkProjet, ButtonLinkRecrutement, EmailLink, MenuItemPartenaires } from "./Buttons";
 
 type CardinfoProps = {
   className?: string;
@@ -185,11 +185,13 @@ export function CardRecrutementAnonces({
   dateLimite,
 }: CardRecrutementAnoncesProps) {
   return (
-    <div className="bg-red-50 border-l-2 border-rouge-milieu p-4 ">
-      <p className="font-semibold text-titre-sous-titre">
+    <div className="bg-red-50 border-l-2 border-rouge-milieu p-4 flex flex-col gap-2 justify-between">
+      <div>
+        <p className="text-texte-citation">
         Offre à soumettre avant le {dateLimite}
       </p>
-      <h2>{titre}</h2>
+      <h2 className="font-semibold text-titre-sous-titre">{titre}</h2>
+      </div>
       <ButtonLinkRecrutement href={linkToAction} texte={textButton} />
     </div>
   );
@@ -220,7 +222,7 @@ export default function JobCard({
         </h2>
         <div className="flex flex-row gap-4">
           <ButtonLink href={`${fileDownload}`} texte="Télécharger l'annonce" />
-          <ButtonLinkRecrutement href="/recrutements" texte="Postuler" />
+          <EmailLink email="contact@ong-dfa.com" subject={`Je postule - ${titre}`} body=""  texte="Postuler" />
         </div>
       </div>
       <p className="text-gray-600 text-sm md:text-base mb-6 leading-relaxed mt-4">

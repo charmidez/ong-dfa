@@ -8,17 +8,17 @@ export function RecrutementAnnonces() {
     <section className="lg:py-16 py-8 px-4 lg:px-8 flex flex-col">
       <TitreSectionRecrutement titre="Annonces de recrutement" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {annonceRecrutemntData.map((annonce) => {
-          return (
+        {[...annonceRecrutemntData]
+          .sort((a, b) => b.id - a.id) // tri du plus grand id au plus petit
+          .map((annonce) => (
             <CardRecrutementAnonces
               key={annonce.id}
               titre={annonce.titre}
               dateLimite={annonce.dateLimite}
-              linkToAction="/recrutements"
+              linkToAction={`/recrutements/${annonce.slug}`}
               textButton="Voir l'annonce"
             />
-          );
-        })}
+          ))}
       </div>
     </section>
   );
@@ -32,7 +32,7 @@ export function AllActualites() {
         {[...actualitesData]
           .sort(
             (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-          ) 
+          )
           .map((article) => (
             <Cardinfo
               key={article.slug}
