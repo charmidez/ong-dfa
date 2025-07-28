@@ -18,7 +18,7 @@ const menuLink = [
   { path: "/", label: "BIENVENUE" },
   { path: "/apropos", label: "À PROPOS" },
   { path: "/projets", label: "PROJETS" },
-  { path: "/actualites", label: "ACTUALITE" },
+  { path: "/actualites", label: "ACTUALITES" },
   { path: "/contact", label: "CONTACT" },
 ];
 
