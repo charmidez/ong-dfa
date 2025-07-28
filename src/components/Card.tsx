@@ -176,6 +176,9 @@ interface CardRecrutementAnoncesProps {
   dateLimite?: string;
   description?: string;
   imgSrc?: string;
+  btnColorClassName? : string;
+  titreColorClassName? : string;
+  cardBgColorClassName? : string;
 }
 
 export function CardRecrutementAnonces({
@@ -183,16 +186,19 @@ export function CardRecrutementAnonces({
   linkToAction,
   textButton,
   dateLimite,
+  btnColorClassName,
+  titreColorClassName,
+  cardBgColorClassName,
 }: CardRecrutementAnoncesProps) {
   return (
-    <div className="bg-red-50 border-l-2 border-rouge-milieu p-4 flex flex-col gap-2 justify-between">
+    <div className={`border-l-2  p-4 flex flex-col gap-2 justify-between ${cardBgColorClassName}`}>
       <div>
-        <p className="text-texte-citation">
+        <p className="text-texte-citation text-gray-900">
         Offre à soumettre avant le {dateLimite}
       </p>
-      <h2 className="font-semibold text-titre-sous-titre">{titre}</h2>
+      <h2 className={`font-semibold text-titre-sous-titre ${titreColorClassName}`}>{titre}</h2>
       </div>
-      <ButtonLinkRecrutement href={linkToAction} texte={textButton} />
+      <ButtonLinkRecrutement href={linkToAction} texte={textButton} className={btnColorClassName}/>
     </div>
   );
 }
