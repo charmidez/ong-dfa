@@ -1,82 +1,117 @@
-const descriptions = [
-  {
-    description: `Nous recherchons un(e) Responsable de la Communication pour rejoindre notre équipe dynamique. Le candidat idéal aura une expérience significative dans la gestion de la communication d'une ONG.
-      Development For All (DFA) recrute un(e) Chargé(e) de Projet pour coordonner la construction d’infrastructures communautaires en milieu rural au Togo 🌱🏗
-
-Tu es passionné(e) par le développement durable, l’ingénierie civile et le travail de terrain ? Cette opportunité est faite pour toi!
-
-🎯 Mission: Superviser la mise en œuvre de projets incluant une école, des centres de santé, des marchés, des systèmes d’assainissement et des forages solaires.
-
-📍 Lieu: Commune Avé 1, Région Maritime, Togo
-📅 Date limite: Vendredi 04 juillet 2025
-📥 Candidature à envoyer par email à ongdfa7@gmail.com ou à déposer au siège de DFA à Lomé
-👉 Mentionner en objet: "Candidature - Chargé(e) de Projet Infrastructure"
-      
-      `,
-  },
-
-  {
-    description: `Nous recrutons un·e Chargé·e de Projet pour coordonner un ambitieux programme d’aménagement en infrastructures socio-économiques en milieu rural, porté par l’ONG Development For All (DFA) en partenariat avec GGGI.
-
-Vous êtes passionné·e par le développement local durable ? Vous avez une solide expérience dans la gestion de projets d’infrastructures communautaires et un fort engagement pour l’impact social et environnemental ? Cette mission est pour vous !
-
-🎯 Mission : Piloter, coordonner et assurer le suivi des activités de construction, incluant écoles, centres de santé, marchés et systèmes d’assainissement.
-
-📍 Lieu d’affectation : Commune Avé 1, Région Maritime, Togo  
-🕓 Contrat : CDD renouvelable  
-📅 Date limite de candidature : Mercredi 17 juillet 2025  
-📥 Envoyez votre candidature par mail à ongdfa7@gmail.com ou consultez www.ong-dfa.com  
-👉 Mentionner en objet : "Candidature - Chargé(e) de Projet Infrastructure"
-  `,
-  },
-
-{
-  description: `Dans le cadre du projet KFS dédié à la résilience des communautés par la filière karité, l’ONG DFA lance un appel à manifestation d’intérêt pour sélectionner des partenaires opérationnels et techniques.
-
-🌱 Activités concernées :
-- Éducation et sensibilisation à la protection de l’environnement,
-- Plantation de karité et reboisement,
-- Formation des jeunes et des femmes rurales,
-- Mise en place de serres, sites post-récolte et activités génératrices de revenus.
-
-👥 Profils ciblés :
-ONG locales, associations, coopératives, formateurs techniques, structures de recherche-développement rural, experts environnement.
-
-📩 Soumission à : dfaprojets@gmail.com  
-📅 Date limite : 08 août 2025 à 12h TU  
-📎 Télécharger ici : https://www.linkedin.com/feed/update/urn:li:activity:7354559982157062145
-
-Semez aujourd’hui pour renforcer l’autonomie des communautés de demain.
-
-#ProjetKFS #ONGDFA #Karité #Reboisement #AutonomisationDesFemmes #DéveloppementRural #AppelÀManifestation #Togo`
-},
 
 
-    {
-    description: `Dans le cadre de son programme d’amélioration des infrastructures communautaires, l’ONG DFA recherche des professionnels qualifiés pour la réalisation d’un marché moderne et d’ouvrages socio-collectifs dans la Commune d’Avé 1 (Togo).
+export const ChargedeProjetSocioEcon = () => {
+  return (
+    <div className="whitespace-pre-line space-y-4 text-base leading-relaxed">
+      <h2 className="text-lg font-semibold uppercase">
+        Recrutement – Chargé·e de Projet Infrastructures Socio-Économiques
+      </h2>
 
-🧱 Travaux prévus :
+      <p>
+        Nous recrutons un·e Chargé·e de Projet pour coordonner un ambitieux programme
+        d’aménagement en infrastructures socio-économiques en milieu rural, porté par
+        l’ONG Development For All (DFA) en partenariat avec GGGI.
+      </p>
 
-Construction d’un marché moderne,
+      <p>
+        Vous êtes passionné·e par le développement local durable ? Vous avez une solide
+        expérience dans la gestion de projets d’infrastructures communautaires et un fort
+        engagement pour l’impact social et environnemental ? Cette mission est pour vous !
+      </p>
 
-Réalisation de forages,
+      <div>
+        <strong>🎯 Mission :</strong>
+        <p>
+          Piloter, coordonner et assurer le suivi des activités de construction, incluant
+          écoles, centres de santé, marchés et systèmes d’assainissement.
+        </p>
+      </div>
 
-Installation de systèmes solaires et d’assainissement,
+      <div className="space-y-1">
+        <p>📍 <strong>Lieu d’affectation :</strong> Commune Avé 1, Région Maritime, Togo</p>
+        <p>🕓 <strong>Contrat :</strong> CDD renouvelable</p>
+        <p>📅 <strong>Date limite de candidature :</strong> Mercredi 17 juillet 2025</p>
+        <p>
+          📥 <strong>Envoyer votre candidature :</strong>{" "}
+          par mail à{" "}
+          <a
+            href="mailto:ongdfa7@gmail.com"
+            className="text-blue-600 underline"
+          >
+            ongdfa7@gmail.com
+          </a>{" "}
+          ou consultez{" "}
+          <a
+            href="https://www.ong-dfa.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            www.ong-dfa.com
+          </a>
+        </p>
+        <p>
+          👉 <strong>Mentionner en objet :</strong>{" "}
+          <span className="italic">Candidature - Chargé(e) de Projet Infrastructure</span>
+        </p>
+      </div>
+    </div>
+  );
+};
 
-Aménagement de divers ouvrages communautaires.
 
-👷🏽‍♀ Profils recherchés :
-Entreprises de BTP, bureaux d’études, architectes, urbanistes, spécialistes en hydraulique rurale, énergies renouvelables et génie civil.
+export const InfrastructureJobDescription = () => {
+  return (
+    <div className="whitespace-pre-line space-y-4 text-base leading-relaxed">
+      <h2 className="text-lg font-semibold uppercase">
+        Recrutement – Chargé(e) de Projet Infrastructures
+      </h2>
 
-📅 Dossier à envoyer au plus tard le 08 août 2025 à 12h TU
-📩 Email : dfaprojets@gmail.com
-📎 Télécharger ici : https://www.linkedin.com/feed/update/urn:li:activity:7354560737622532096
-Construisons ensemble des infrastructures durables pour un développement équitable.
+      <p>
+        Nous recherchons un(e) Responsable de la Communication pour rejoindre notre
+        équipe dynamique. Le candidat idéal aura une expérience significative dans la
+        gestion de la communication pour une ONG.
+      </p>
 
-#ONGDFA #MAFRA #MarchéModerne #DéveloppementLocal #InfrastructuresRurales #Appeldoffres #Togo
-  `,
-  },
-];
+      <p>
+        Development For All (DFA) recrute un(e) Chargé(e) de Projet pour coordonner la
+        construction d’infrastructures communautaires en milieu rural au Togo 🌱🏗
+      </p>
+
+      <p>
+        Tu es passionné(e) par le développement durable, l’ingénierie civile et le
+        travail de terrain ? Cette opportunité est faite pour toi !
+      </p>
+
+      <div>
+        <strong>🎯 Mission :</strong>
+        <p>
+          Superviser la mise en œuvre de projets incluant une école, des centres de santé,
+          des marchés, des systèmes d’assainissement et des forages solaires.
+        </p>
+      </div>
+
+      <div className="space-y-1">
+        <p>📍 <strong>Lieu :</strong> Commune Avé 1, Région Maritime, Togo</p>
+        <p>📅 <strong>Date limite :</strong> Vendredi 04 juillet 2025</p>
+        <p>
+          📥 <strong>Candidature :</strong> À envoyer par email à{" "}
+          <a
+            href="mailto:ongdfa7@gmail.com"
+            className="text-blue-600 underline"
+          >
+            ongdfa7@gmail.com
+          </a>{" "}
+          ou à déposer au siège de DFA à Lomé
+        </p>
+        <p>
+          👉 <strong>Mentionner en objet :</strong>{" "}
+          <span className="italic">Candidature - Chargé(e) de Projet Infrastructure</span>
+        </p>
+      </div>
+    </div>
+  );
+};
 
 
 export const KFSDescription = () => {
@@ -221,7 +256,7 @@ export const annonceRecrutemntData = [
     slug: "responsable-communication",
     img: "/images/img-4.webp",
     titre: "Chargé(e) de Projet Infrastructure",
-    description: descriptions[0].description,
+    description: <InfrastructureJobDescription />,
     datePublication: "2023-10-01",
     dateLimite: "04 juillet 2025",
     linkToAction: "/recrutement/responsable-communication",
@@ -235,7 +270,7 @@ export const annonceRecrutemntData = [
     slug: "charge-projet",
     img: "/images/img-4.webp",
     titre: "Chargé(e) de Projet Infrastructure",
-    description: descriptions[1].description,
+    description: <ChargedeProjetSocioEcon />,
     datePublication: "2025-07-14",
     dateLimite: "17 juillet 2025",
     linkToAction: "mailto:ongdfa7@gmail.com",
