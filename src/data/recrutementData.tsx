@@ -132,7 +132,7 @@ export const KFSDescription = () => {
         <strong>🌱 Activités concernées :</strong>
         <ul className="list-disc list-inside ml-4 mt-1">
           <li>Éducation et sensibilisation à la protection de l’environnement</li>
-          <li>Plantation de karité et reboisement</li>
+          <li>Plantation et entretien de l'existant </li>
           <li>Formation des jeunes et des femmes rurales</li>
           <li>
             Mise en place de serres, sites post-récolte et activités génératrices de
@@ -169,8 +169,8 @@ export const KFSDescription = () => {
         </p>
       </div>
 
-      <p className="italic">
-        Semez aujourd’hui pour renforcer l’autonomie des communautés de demain.
+      <p className="italic text-vert-fonce font-semibold">
+        {`Semez aujourd'hui pour restaurer l'environnement.`}
       </p>
 
       <div className="text-sm text-gray-600">
@@ -181,9 +181,6 @@ export const KFSDescription = () => {
   );
 };
 
-
-
-import React from "react";
 
 export const MAFRADescription = () => {
   return (
@@ -238,7 +235,7 @@ export const MAFRADescription = () => {
         </p>
       </div>
 
-      <p className="italic">
+      <p className="italic text-vert-fonce font-semibold">
         Ensemble, bâtissons des infrastructures durables au service d’un développement équitable.
       </p>
 
