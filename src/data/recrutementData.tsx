@@ -132,7 +132,7 @@ export const KFSDescription = () => {
         <strong>🌱 Activités concernées :</strong>
         <ul className="list-disc list-inside ml-4 mt-1">
           <li>Éducation et sensibilisation à la protection de l’environnement</li>
-          <li>Plantation et entretien de l'existant </li>
+          <li>{`Plantation et entretien de l'existant`} </li>
           <li>Formation des jeunes et des femmes rurales</li>
           <li>
             Mise en place de serres, sites post-récolte et activités génératrices de
