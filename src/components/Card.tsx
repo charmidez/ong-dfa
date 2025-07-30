@@ -204,10 +204,11 @@ export function CardRecrutementAnonces({
 }
 
 import { CalendarDays, Phone } from "lucide-react";
+import { JSX } from "react";
 
 interface JobCardProps {
   titre: string;
-  description: string;
+  description: JSX.Element;
   telephone: string;
   dateLimite: string;
   fileDownload?: string;
@@ -221,7 +222,7 @@ export default function JobCard({
   fileDownload,
 }: JobCardProps) {
   return (
-    <div className="w-fit mx-auto bg-white shadow rounded-lg p-4 lg:p-8">
+    <div className="w-fit mx-auto bg-white lg:px-32  p-4 lg:p-8">
       <div className="flex lg:flex-row flex-col justify-between">
         <h2 className="text-titre-section font-bold text-gray-800 mb-4 lg:mb-0">
           {titre}
