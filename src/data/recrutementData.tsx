@@ -30,31 +30,26 @@ Vous êtes passionné·e par le développement local durable ? Vous avez une sol
   `,
   },
 
-  {
-    description: `Dans le cadre du projet KFS dédié à la résilience des communautés par la filière karité, l’ONG DFA lance un appel à manifestation d’intérêt pour sélectionner des partenaires opérationnels et techniques.
+{
+  description: `Dans le cadre du projet KFS dédié à la résilience des communautés par la filière karité, l’ONG DFA lance un appel à manifestation d’intérêt pour sélectionner des partenaires opérationnels et techniques.
 
 🌱 Activités concernées :
-
-Éducation et sensibilisation à la protection de l’environnement,
-
-Plantation de karité et reboisement,
-
-Formation des jeunes et des femmes rurales,
-
-Mise en place de serres, sites post-récolte et activités génératrices de revenus.
+- Éducation et sensibilisation à la protection de l’environnement,
+- Plantation de karité et reboisement,
+- Formation des jeunes et des femmes rurales,
+- Mise en place de serres, sites post-récolte et activités génératrices de revenus.
 
 👥 Profils ciblés :
 ONG locales, associations, coopératives, formateurs techniques, structures de recherche-développement rural, experts environnement.
 
-📩 Soumission à : dfaprojets@gmail.com
-📅 Date limite : 08 août 2025 à 12h TU
+📩 Soumission à : dfaprojets@gmail.com  
+📅 Date limite : 08 août 2025 à 12h TU  
 📎 Télécharger ici : https://www.linkedin.com/feed/update/urn:li:activity:7354559982157062145
 
 Semez aujourd’hui pour renforcer l’autonomie des communautés de demain.
 
-#ProjetKFS #ONGDFA #Karité #Reboisement #AutonomisationDesFemmes #DéveloppementRural #AppelÀManifestation #Togo
-  `,
-  },
+#ProjetKFS #ONGDFA #Karité #Reboisement #AutonomisationDesFemmes #DéveloppementRural #AppelÀManifestation #Togo`
+},
 
 
     {
@@ -131,7 +126,7 @@ export const annonceRecrutemntData = [
     slug: "projet-mafra",
     img: "/images/img-4.webp",
     titre: "AVIS À MANIFESTATION D’INTÉRÊT N°002/2025/DFA/PRO_MAFRA",
-    description: descriptions[2].description,
+    description: descriptions[3].description,
     datePublication: "2025-07-14",
     dateLimite: "08 août 2025",
     linkToAction: "mailto:dfaprojets@gmail.com",
@@ -140,3 +135,67 @@ export const annonceRecrutemntData = [
     telephone: "+228 91 27 03 69",
   },
 ];
+
+
+
+
+
+
+
+export const KFSDescription = () => {
+  return (
+    <div className="whitespace-pre-line space-y-4 text-base leading-relaxed">
+      <p>
+        Dans le cadre du projet KFS dédié à la résilience des communautés par la
+        filière karité, l’ONG DFA lance un appel à manifestation d’intérêt pour
+        sélectionner des partenaires opérationnels et techniques.
+      </p>
+
+      <div>
+        <strong>🌱 Activités concernées :</strong>
+        <ul className="list-disc list-inside ml-4 mt-1">
+          <li>Éducation et sensibilisation à la protection de l’environnement</li>
+          <li>Plantation de karité et reboisement</li>
+          <li>Formation des jeunes et des femmes rurales</li>
+          <li>
+            Mise en place de serres, sites post-récolte et activités génératrices de
+            revenus
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <strong>👥 Profils ciblés :</strong>
+        <p>
+          ONG locales, associations, coopératives, formateurs techniques, structures
+          de recherche-développement rural, experts environnement.
+        </p>
+      </div>
+
+      <div className="space-y-1">
+        <p>📩 <strong>Soumission à :</strong> dfaprojets@gmail.com</p>
+        <p>📅 <strong>Date limite :</strong> 08 août 2025 à 12h TU</p>
+        <p>
+          📎 <strong>Télécharger ici :</strong>{" "}
+          <a
+            href="https://www.linkedin.com/feed/update/urn:li:activity:7354559982157062145"
+            className="text-blue-600 underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Lien LinkedIn
+          </a>
+        </p>
+      </div>
+
+      <p className="italic">
+        Semez aujourd’hui pour renforcer l’autonomie des communautés de demain.
+      </p>
+
+      <div className="text-sm text-gray-600">
+        #ProjetKFS #ONGDFA #Karité #Reboisement #AutonomisationDesFemmes{" "}
+        #DéveloppementRural #AppelÀManifestation #Togo
+      </div>
+    </div>
+  );
+};
