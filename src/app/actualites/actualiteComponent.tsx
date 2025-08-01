@@ -366,8 +366,7 @@ export  function ArticleEFH() {
 }
 
 
-
-export default function ArticleVIR() {
+export function ArticleVIR() {
   return (
     <div className="max-w-3xl mx-auto p-6 rounded-2xl shadow-md bg-transparent font-sans">
       <h1 className="mb-4 text-titre-page text-vert-fonce font-bold">
@@ -426,6 +425,45 @@ export default function ArticleVIR() {
     </div>
   );
 }
+
+
+export const ArticleCertificatOIF = () => {
+  return (
+    <article className="prose max-w-none">
+      <h1 className="text-titre-section">Certificat Jeunesse, Paix et Sécurité – 2ᵉ édition</h1>
+
+      <p>
+        L’Organisation internationale de la Francophonie (OIF) et l’Université Senghor annoncent le lancement de la deuxième édition du <strong>certificat en ligne « Jeunesse, paix et sécurité »</strong>.
+      </p>
+
+      <p>
+        Cette formation vise à <strong>renforcer les compétences des jeunes engagés</strong> dans les domaines suivants :
+      </p>
+
+      <ul>
+        <li>Paix et cohésion sociale</li>
+        <li>Médiation</li>
+        <li>Participation citoyenne</li>
+        <li>Prévention des conflits</li>
+      </ul>
+
+      <p>
+        💻 <strong>Format :</strong> 100% en ligne<br />
+        📅 <strong>Date limite de candidature :</strong> 31 août 2025
+      </p>
+
+      <p>
+        🔗 <a href="https://ow.ly/x3Lx50WxcY6" target="_blank" rel="noopener noreferrer">
+          En savoir plus et candidater ici
+        </a>
+      </p>
+
+      <p className="mt-6 text-sm text-gray-500">
+        #Francophonie #Jeunesse #Sécurité
+      </p>
+    </article>
+  );
+};
 
 
 
