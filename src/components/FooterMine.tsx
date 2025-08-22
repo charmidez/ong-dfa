@@ -1,7 +1,7 @@
 //import Link from "next/link";
 import Image from "next/image";
 
-import { nomDuSite, nomDuSiteDefini } from "@/data/globalData";
+import { addresseLocalisation, nomDuSite, nomDuSiteDefini } from "@/data/globalData";
 import { ButtonLinkWhatsApp, MenuItem } from "./Buttons";
 
 const Footer = () => {
@@ -192,7 +192,7 @@ const Footer = () => {
                 height={20}
               />
               <div className="flex flex-col">
-                <span>Kpéhénou, dans la VON de la Pharmacie, Rue Monata</span>
+                <span>{addresseLocalisation}</span>
                 <span className="font-semibold">Lomé - Togo</span>
               </div>
             </li>
