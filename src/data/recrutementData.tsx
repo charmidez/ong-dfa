@@ -68,9 +68,7 @@ export const InfrastructureJobDescription = () => {
       </h2>
 
       <p>
-        Nous recherchons un(e) Responsable de la Communication pour rejoindre notre
-        équipe dynamique. Le candidat idéal aura une expérience significative dans la
-        gestion de la communication pour une ONG.
+        Nous recherchons un(e) Chargé(e) de Projet Infrastructures pour rejoindre notre équipe dynamique. Le candidat idéal aura une expérience significative dans la gestion de projets d’infrastructures au sein d’une ONG.
       </p>
 
       <p>
@@ -250,13 +248,13 @@ export const MAFRADescription = () => {
 export const annonceRecrutemntData = [
   {
     id: 1,
-    slug: "responsable-communication",
+    slug: "charge-de-projet-infrastructure",
     img: "/images/img-4.webp",
     titre: "Chargé(e) de Projet Infrastructure",
     description: <InfrastructureJobDescription />,
     datePublication: "2023-10-01",
     dateLimite: "04 juillet 2025",
-    linkToAction: "/recrutement/responsable-communication",
+    linkToAction: "/recrutement/charge-de-projet-infrastructure",
     textButton: "Postuler maintenant",
     filesDownload: "/files/job.docx",
     telephone: "+228 91 27 03 69",
