@@ -6,10 +6,10 @@ import {
   RencontreHorizonIA,
   ArticleEFH,
   ArticleCertificatOIF,
+  ArticleFablabsOIF,
 } from "@/app/actualites/actualiteComponent";
 
 export const actualitesData = [
-  
   {
     slug: "situation-des-ong-au-togo-2025",
     titre: "Quel est l’état actuel des ONG au Togo en 2025 ?",
@@ -19,7 +19,6 @@ export const actualitesData = [
     component: <SituationONGTogo2025 />,
     auteur: "Communication ONG DFA",
   },
-
   {
     slug: "appel-candidatures-filles-commandes-2025",
     titre: "Appel à candidature – Filles aux commandes 2025",
@@ -29,7 +28,6 @@ export const actualitesData = [
     component: <AppelCandidatureFilles2025 />,
     auteur: "Communication ONG DFA",
   },
-
   {
     slug: "appel-candidatures-programme-d-clic-2025",
     titre: "Appel à candidatures – Programme D-CLIC de l’OIF",
@@ -49,35 +47,43 @@ export const actualitesData = [
     component: <RencontreHorizonIA />,
     auteur: "Communication ONG DFA",
   },
-{
-  slug: "appel-candidatures-efh-education-2025",
-  titre: "Appel à candidatures – Égalité femmes-hommes en éducation",
-  date: "2025-07-14",
-  image: "/images/featured/candidature-2.jpeg", 
-  resume: `Rejoignez la formation du 5 août au 5 septembre 2025 pour devenir un acteur clé de l’égalité femmes-hommes en éducation.`,
-  component: <ArticleEFH />,
-  auteur: "Communication ONG DFA",
-},
-{
-  slug: "volontariat-international-reciprocite-vir-2025",
-  titre: "Volontariat International de Réciprocité – Candidature ouverte",
-  date: "2025-07-15",
-  image: "/images/featured/recrutement.jpeg", 
+  {
+    slug: "appel-candidatures-efh-education-2025",
+    titre: "Appel à candidatures – Égalité femmes-hommes en éducation",
+    date: "2025-07-14",
+    image: "/images/featured/candidature-2.jpeg",
+    resume: `Rejoignez la formation du 5 août au 5 septembre 2025 pour devenir un acteur clé de l’égalité femmes-hommes en éducation.`,
+    component: <ArticleEFH />,
+    auteur: "Communication ONG DFA",
+  },
+  {
+    slug: "volontariat-international-reciprocite-vir-2025",
+    titre: "Volontariat International de Réciprocité – Candidature ouverte",
+    date: "2025-07-15",
+    image: "/images/featured/recrutement.jpeg",
+    resume:
+      "Participez à une mission en France sur le thème de l’horticulture et de la citoyenneté mondiale grâce au programme VIR.",
+    component: <ArticleVIR />,
+    auteur: "Communication ANVT / France Volontaires",
+  },
+  {
+    slug: "certificat-jeunesse-paix-securite-oif-2025",
+    titre: "Certificat Jeunesse, Paix et Sécurité – 2ᵉ édition ouverte",
+    date: "2025-08-01",
+    image: "/images/featured/jeunesse-paix.jpeg",
+    resume:
+      "L’OIF et l’Université Senghor lancent la 2ᵉ édition du certificat francophone sur la jeunesse, la paix et la sécurité. Formation en ligne pour les jeunes engagés.",
+    component: <ArticleCertificatOIF />,
+    auteur: "Communication ONG DFA / OIF",
+  },
+  {
+  slug: "appel-candidatures-fablabs-oif-2025",
+  titre: "Appel à candidatures – Formations en fabrication numérique",
+  date: "2025-10-17",
+  image: "/images/featured/fablab-oif.jpeg",
   resume:
-    "Participez à une mission en France sur le thème de l’horticulture et de la citoyenneté mondiale grâce au programme VIR.",
-  component: <ArticleVIR />,
-  auteur: "Communication ANVT / France Volontaires",
-},
-{
-  slug: "certificat-jeunesse-paix-securite-oif-2025",
-  titre: "Certificat Jeunesse, Paix et Sécurité – 2ᵉ édition ouverte",
-  date: "2025-08-01",
-  image: "/images/featured/jeunesse-paix.jpeg", 
-  resume:
-    "L’OIF et l’Université Senghor lancent la 2ᵉ édition du certificat francophone sur la jeunesse, la paix et la sécurité. Formation en ligne pour les jeunes engagés.",
-  component: <ArticleCertificatOIF />,
-  auteur: "Communication ONG DFA / OIF",
+    "L’OIF recherche des organismes capables de concevoir et dispenser des formations en présentiel dans la fabrication numérique, adaptées aux besoins locaux et favorisant l’employabilité.",
+  component: <ArticleFablabsOIF />,
+  auteur: "Communication OIF / Francophonie",
 }
-
-
 ];

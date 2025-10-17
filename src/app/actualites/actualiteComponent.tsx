@@ -469,6 +469,59 @@ export const ArticleCertificatOIF = () => {
 
 
 
+export const ArticleFablabsOIF = () => {
+  return (
+    <article className="prose max-w-none">
+      <h1 className="text-titre-section">
+        Appel à candidatures – Formations en fabrication numérique
+      </h1>
+
+      <p>
+        L’<strong>Organisation internationale de la Francophonie (OIF)</strong> lance un
+        <strong> appel à candidatures </strong> pour sélectionner des organismes capables de
+        concevoir et de dispenser des <strong>formations en présentiel</strong> dans le domaine
+        de la <strong>fabrication numérique</strong>.
+      </p>
+
+      <p>
+        Ces formations doivent être <strong>adaptées aux besoins locaux</strong> et viser à
+        <strong> renforcer l’employabilité</strong> des bénéficiaires, tout en soutenant
+        l’innovation et l’économie numérique inclusive.
+      </p>
+
+      <p>
+        Cet appel s’adresse aux :
+      </p>
+
+      <ul>
+        <li>Fablabs agréés</li>
+        <li>Tiers-lieux expérimentés</li>
+        <li>Centres de formation professionnelle spécialisés dans la fabrication numérique</li>
+      </ul>
+
+      <p>
+        🔗{" "}
+        <a
+          href="https://ow.ly/z4QR50Xb2mV"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Postulez ici
+        </a>
+      </p>
+
+      <p className="mt-6 text-sm text-gray-500">
+        #Francophonie #FabricationNumérique #Emploi #Innovation
+      </p>
+    </article>
+  );
+};
+
+
+
+
+
+
 
 
 
